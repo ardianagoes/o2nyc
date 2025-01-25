@@ -9,7 +9,7 @@ const App = () => {
   useEffect(() => {
     const handleResize = () => {
       setWindowHeight(window.innerHeight);
-    };gir
+    };
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
