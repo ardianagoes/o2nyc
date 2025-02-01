@@ -6,7 +6,6 @@ export default function Home() {
   return (
     <Box className="Home-page">
       <Navbar/>
-      <Typography className="title">hi</Typography>
     </Box>
   );
 }
