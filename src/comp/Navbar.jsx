@@ -4,7 +4,6 @@ import { Box, Link } from "@mui/material";
 
 const Navbar = () => {
 
-    
   return (
     <Box className="navbar">
       <Box className="navbar-container">

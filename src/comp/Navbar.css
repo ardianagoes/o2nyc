@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
 .navbar{
     animation: fadeInAnimation ease 1s;
     display: flex;
@@ -51,10 +52,14 @@
     text-decoration: none !important; 
     position: relative;
     display: inline-block;
-    font-size: 1.5rem !important;
-    padding-right: 3rem;
+    font-size: 1.7rem !important;
+    padding-right: 2.8rem;
     color: white !important;
     text-shadow: 2px 2px 5px black;
+    font-family: "Old Standard TT", serif !important; 
+    font-weight: 400 !important;
+    font-style: normal !important;
+    letter-spacing: 3px;
 }
 
 .selection-item:hover {
@@ -74,3 +79,19 @@
       filter: blur(0);
     }
   }
+
+  .selection-item::after {
+    content: "";
+    position: absolute;
+    left: 34%;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.selection-item:hover::after {
+    width: 70%;
+}
