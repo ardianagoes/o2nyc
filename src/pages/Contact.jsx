@@ -1,11 +1,11 @@
-import "./About.css";
+import "./Contact.css";
 import { Box, Typography } from "@mui/material";
 import Navbar from "../comp/Navbar";
 
-export default function About() {
+export default function Contact() {
   return (
-    <Box className="about-page">
-      <Box className="navbar-box">
+    <Box className="contact-page">
+        <Box className="navbar-box">
       <Navbar/>
       </Box>
     </Box>

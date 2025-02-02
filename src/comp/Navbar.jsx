@@ -8,7 +8,7 @@ const Navbar = () => {
     <Box className="navbar">
       <Box className="navbar-container">
         <Box className="logo-container" sx={{ width: "10%" }}>
-          <Link href="/"><img src="/logo.png" alt="logo" className= "website-logo"/></Link>
+          <Link href="/"><img src="images/logo.png" alt="logo" className= "website-logo"/></Link>
         </Box>
             <Link href="/about" className="selection-item">About Us</Link>
             <Link href="/research" className="selection-item">Research</Link>
