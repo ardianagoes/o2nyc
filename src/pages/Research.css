@@ -1,0 +1,47 @@
+.research-page{
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+    background-color: #ffe5e3;
+    color: #444484;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 150px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.navbar-box {
+    margin-bottom: 100px;
+}
+
+.content-block1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%; 
+    padding: 0 20px; 
+}
+
+.left-column, .right-column {
+    display: flex;
+    flex: 1; 
+    padding: 20px; 
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        background-color: white; 
+    }
+    100% {
+        opacity: 1;
+        background-color: #ffe5e3; 
+    }
+}
+
