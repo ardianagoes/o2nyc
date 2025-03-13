@@ -9,19 +9,27 @@
     width: 100%;
     top: 0;
     position: fixed;
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.navbar-scrolled {
+    opacity: 0;  
+    transform: translateY(-10px); 
+}
+
+.navbar-scrolled:hover {
+    opacity: 1;
 }
 
 .navbar-container {
     display: flex;
     flex-direction: row;
-    width: 70%;
+    width: 100%;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: #3cba5d;
+    background-color: #6eb2d1;
     margin-left: 10px;
-    border-radius: 0 0 50px 50px; 
-    border-radius: 0 0 50px 50px; 
     box-shadow: 0 0 15px rgba(0, 0, 0, 1);
     margin-left: auto; margin-right: auto;
 }
@@ -64,9 +72,9 @@
 
 .selection-item:hover {
     transform: scale(1.1); 
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
-    0 0 20px rgba(255, 255, 255, 0.6), 
-    0 0 30px rgba(255, 255, 255, 0.4);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+    0 0 20px rgba(255, 255, 255, 0.3), 
+    0 0 30px rgba(255, 255, 255, 0.1);
 }
 
 .website-logo:hover {
@@ -76,7 +84,7 @@
   .selection-item::after {
     content: "";
     position: absolute;
-    left: 34%;
+    left: 30%;
     bottom: -5px;
     width: 0;
     height: 3px;
@@ -86,5 +94,5 @@
 }
 
 .selection-item:hover::after {
-    width: 70%;
+    width: 50%;
 }

@@ -1,0 +1,66 @@
+.footer {
+    font-weight: 400;
+    padding-top: 10px;
+    background-color: white;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+    color: black;
+    -webkit-text-stroke: 0.5px black;
+    border-top: 3px solid rgb(255, 255, 255);
+    overflow: hidden;
+  }
+  
+  .icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 0;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  .logo-ref img {
+    height: 40px;
+    width: 40px;
+    margin: 0;
+    padding: 0px;
+  }
+  
+  .developer-columns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .developer-column {
+    text-align: center;
+    padding: 0 20px; 
+  }
+  
+  .divider {
+    width: 2px;
+    background-color: white;
+    height: 5em; 
+    z-index: 1;
+    align-self: stretch; 
+  }
+  
+  @media screen and (max-width: 430px) {
+    .contact-box {
+      padding-left: 2em;
+    }
+  }
+  
