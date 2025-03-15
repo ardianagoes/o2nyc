@@ -1,4 +1,4 @@
-.home-page{
+.home-page {
     display: flex;
     flex-direction: column;
     background-position: center;
@@ -10,14 +10,13 @@
     overflow-x: hidden;
     overflow-y: auto;
     animation: fadeIn 1s ease-in-out;
-    padding-top: 50px;
 }
 
 .banner-picture {
-    width: 100vw; 
-    height: auto; 
-    display: block; 
-    object-fit: cover; 
+    width: 100vw;
+    height: auto;
+    display: block;
+    object-fit: cover;
     justify-content: center;
 }
 
@@ -25,60 +24,75 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px; 
+    gap: 50px;
     padding: 50px 10%;
 }
 
+.text-with-image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;  
+}
+
+.text-with-image.left {
+    flex-direction: row; 
+}
+
+.text-with-image.right {
+    flex-direction: row-reverse; 
+}
+
 .text-box {
-    width: 40%;
+    width: 45%;  
     padding: 100px 20px;
     background: white;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transform: translateX(-100px);
-    transition: all 0.2s ease-out;
+    transition: all 0.3s ease-out;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;  
-    align-items: flex-start; 
-    justify-content: flex-start; 
 }
 
-.text-box.left {
-    align-self: flex-start;  
-    transform: translateX(-100px);
+.image-box {
+    width: 45%;  
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
 }
 
-.text-box.right {
-    align-self: flex-end;  
-    transform: translateX(100px);
-}
-
-
-.text-box.visible {
+.text-box.visible,
+.image-box.visible {
     opacity: 1;
     transform: translateX(0);
 }
 
-.text-box.hidden {
+.text-box.hidden,
+.image-box.hidden {
     opacity: 0;
-    transform: translateY(50px); 
+    transform: translateY(50px);
     transition: all 0.2s ease-out;
 }
 
-.home-picture {
-    max-width: 100%;
+.transition-image {
+    width: 100%; 
     height: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.transition-image.visible {
+    opacity: 1;
 }
 
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        background-color: #6eb2d1; 
+        background-color: #6eb2d1;
     }
     100% {
         opacity: 1;
-        background-color: #6eb2d1; 
+        background-color: #6eb2d1;
     }
 }
-
