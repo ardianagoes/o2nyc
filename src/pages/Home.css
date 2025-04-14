@@ -69,7 +69,7 @@
   border-radius: 8px;       
   color: #43b2b0;             
   opacity: 0;
-  transform: translateX(-100px); 
+  transform: translateX(-50rem); 
   transition: opacity 1.5s ease-out, transform 1.5s ease-out;
   visibility: hidden; 
 }
@@ -134,7 +134,7 @@
   color: white; 
   text-shadow: 0.1px 0.1px 0.1px black;
   opacity: 0;
-  transform: translateX(20rem); 
+  transform: translateX(40rem); 
   transition: opacity 1.5s ease-out, transform 1.5s ease-out;
   visibility: hidden;
 }
@@ -149,6 +149,7 @@
   color: inherit; 
   font-family: "Kanit", serif; 
   margin-bottom: 0.75rem; 
+  font-size: 1.25rem;
 }
 .action-text-box .MuiTypography-h6 { 
    font-weight: 600;
@@ -174,6 +175,9 @@
 }
 
 .google-form-iframe {
+  background-color: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
   width: 100%;        
   max-width: 50rem;    
   height: 85rem;

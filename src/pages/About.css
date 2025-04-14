@@ -3,36 +3,54 @@
     flex-direction: column;
     background-position: center;
     background-size: cover;
-    background-color: #6eb2d1;
-    color: #444484;
+    background-color: #43b2b0;
     min-height: 100vh;
     width: 100vw;
     overflow-x: hidden;
     overflow-y: auto;
-    padding-top: 150px;
+    padding-top: 1rem;
     animation: fadeIn 1s ease-in-out;
 }
 
-.navbar-box {
-    margin-bottom: 100px;
-}
-
-.content-block1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between; 
-    width: 100%; 
-    padding: 0 20px; 
-}
-
-.left-column, .right-column {
-    display: flex;
-    flex: 1; 
-    padding: 20px; 
-    justify-content: center;
-    align-items: center;
-}
+.title-box {
+    width: fit-content; 
+    margin: 100px auto 0.5rem auto; 
+    display: block;
+    padding: 1rem 3rem;   
+    border-radius: 50px;  
+    border: 3px solid white; 
+    box-shadow: 0 4px 12px black;
+  }
+  
+  .page-title.about-title { 
+    text-align: center;
+    color: white;
+    font-family: "Kanit", serif !important;
+    font-size: 2.8rem !important;
+    font-weight: 700 !important;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    padding: 0;
+    line-height: 1.2; 
+  }
+  
+.about-intro-section {
+    padding: 1.5rem 1.5rem;
+    margin: 1rem auto;
+    text-align: center;
+    max-width: 850px;
+    background-color: white;
+    border-radius: 2rem;
+  }
+  
+  .about-intro-text,
+  .about-intro-section .MuiTypography-body1 {
+    font-family: "Kanit", serif !important;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #43b2b0;
+    font-weight: 600;
+  }
 
 @keyframes fadeIn {
     0% {
@@ -44,4 +62,108 @@
         background-color: #43b2b0; 
     }
 }
+
+.about-intro-section {
+    padding: 3rem 1.5rem;
+    margin: 2rem auto; 
+    text-align: center;
+    max-width: 850px;
+    margin-top: 100px; 
+  }
+  
+  .team-display-area {
+    padding: 2rem 1rem; 
+  }
+  
+  .team-role-section { 
+    margin-top: 3rem;
+    margin-bottom: 4rem; 
+  }
+  
+  .role-title {
+    text-align: center;
+    color: white;
+    font-family: "Kanit", serif !important;
+    font-size: 2.8rem !important; 
+    font-weight: 600 !important;
+    margin-bottom: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .members-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem; 
+    margin-top: 1rem;
+  }
+  
+  .member-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 280px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .member-image-container {
+    width: 160px; 
+    height: 160px;
+    border-radius: 50%; 
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+    background-color: #f0f0f0; 
+    box-shadow: 0 2px 4px black;
+  }
+  
+  .member-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+  
+  .member-name {
+    font-family: "Kanit", serif !important;
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    color: #2c3e50; 
+    margin-bottom: 0.5rem;
+  }
+  
+  .member-blurb {
+    font-family: "Kanit", serif !important;
+    font-size: 1rem !important;
+    color: #555; 
+    line-height: 1.6;
+    flex-grow: 1; 
+  }
+  
+  @media screen and (max-width: 600px) {
+    .role-title {
+        font-size: 2rem !important;
+        margin-bottom: 1.5rem;
+    }
+    .members-row {
+        gap: 1.5rem;
+    }
+    .member-card {
+        width: calc(100% - 2rem); 
+        max-width: 300px; 
+    }
+    .about-intro-text,
+    .about-intro-section .MuiTypography-body1 {
+        font-size: 1.2rem;
+    }
+  }
 
