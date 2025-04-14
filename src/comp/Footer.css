@@ -7,14 +7,16 @@
   margin: 0;
   text-align: center;
   color: #215d4e;
-  -webkit-text-stroke: 0.5px black;
-  border-top: 3px solid rgb(255, 255, 255);
+  -webkit-text-stroke: 0.5px #43b2b0;
+;
+  border-top: 3px solid white;
   overflow: hidden; 
 }
 .footer-logo-container {
   display: flex;          
   justify-content: center;
 }
+
 
 .footer-main-logo {
   max-width: 15rem;  
@@ -70,7 +72,7 @@
 
 .contact-box .MuiTypography-body1 { 
   color: #215d4e;
-  -webkit-text-stroke: 0.5px black; 
+  -webkit-text-stroke: 0.5px #43b2b0; 
   margin-top: 5px; 
 }
 

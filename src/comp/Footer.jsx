@@ -60,7 +60,7 @@ const Footer = () => {
           </Link>
         </Box>
       </Box>
-      <Typography variant="body1" align="center">
+      <Typography className="copyright" variant="body1" align="center">
         ©{new Date().getFullYear()} O2NYC 
       </Typography>
       <br />
