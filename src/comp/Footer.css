@@ -45,10 +45,10 @@
   padding: 10px;
   margin: 0px;
   opacity: 0%;
-  opacity: 0;                       
+  opacity: 0;
   transform: translateY(20px);      
   transition: opacity 0.8s ease-out, transform 0.8s ease-out; 
-}
+}                   
 
 .icons.visible {
   opacity: 1;                       

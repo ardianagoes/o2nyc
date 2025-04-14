@@ -1,4 +1,5 @@
-/* Home.css */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 .home-page {
     display: flex;
@@ -29,6 +30,77 @@
   object-fit: cover; 
 }
 
+.motto-section {
+  padding: 3rem 1.5rem; 
+  margin: 0;            
+  text-align: center;   
+  background-color: white;
+}
+
+.motto-text, 
+.motto-section .MuiTypography-h5 
+ {
+  background-color: #43b2b0;
+  padding: 5rem;
+  border-radius: 1rem;
+  max-width: 850px;     
+  margin: 0 auto;      
+  color: white;      
+  font-family: "Kanit", serif !important; 
+  font-weight: 500 !important; 
+  font-size: 1.9rem !important; 
+  line-height: 1.6;  
+  text-shadow: 1px 1px 3px black;
+}
+
+.info-section {
+  display: flex;
+  align-items: center;     
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background-color: #43b2b0; 
+}
+
+.info-text-box {
+  letter-spacing: 3px;
+  flex: 1;                  
+  background-color: white;
+  padding: 2.5rem;        
+  border-radius: 8px;       
+  color: #43b2b0;             
+  opacity: 0;
+  transform: translateX(-100px); 
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  visibility: hidden; 
+}
+
+.info-text-box.visible {
+  opacity: 1;
+  transform: translateX(10rem); 
+  visibility: visible;
+}
+
+.info-image-container {
+  flex: 1;                  
+  text-align: center;      
+}
+
+.info-image {
+  width: 20rem;          
+  height: auto;
+  display: inline-block;    
+  border-radius: 1px;      
+}
+
+.info-text-box .MuiTypography-root {
+  color: #43b2b0;
+  font-size: 1.3rem;
+  text-shadow: 0.1px 0.1px 0.1px black;
+  font-family: "Kanit", serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+
 .main-content-area {
   flex-grow: 1; 
   padding: 20px; 
@@ -43,4 +115,116 @@
    position: sticky;
    top: 0;
    z-index: 10;
+}
+
+.action-section {
+  display: flex;
+  align-items: stretch; 
+  gap: 2rem;
+  padding: 3rem 2rem;
+  margin: 2rem 0;
+  background-color: white;
+}
+
+.action-text-box {
+  flex: 1; 
+  background-color: #43b2b0; 
+  padding: 2.5rem;
+  border-radius: 8px;
+  color: white; 
+  text-shadow: 0.1px 0.1px 0.1px black;
+  opacity: 0;
+  transform: translateX(20rem); 
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  visibility: hidden;
+}
+
+.action-text-box.visible {
+  opacity: 1;
+  transform: translateX(-0.2rem); 
+  visibility: visible;
+}
+
+.action-text-box .MuiTypography-root {
+  color: inherit; 
+  font-family: "Kanit", serif; 
+  margin-bottom: 0.75rem; 
+}
+.action-text-box .MuiTypography-h6 { 
+   font-weight: 600;
+   margin-top: 1.5rem;
+   margin-bottom: 0.5rem;
+}
+
+.map-container {
+  flex: 1; 
+  min-height: 400px; 
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%; 
+  border: none; 
+  border-radius: 8px; 
+}
+
+.form-section {
+  background-color: #43b2b0; 
+  text-align: center;   
+}
+
+.google-form-iframe {
+  width: 100%;        
+  max-width: 50rem;    
+  height: 85rem;
+  border: none;   
+  display: block;          
+  margin-left: auto;
+  margin-right: auto;     
+  border-radius: 8px;     
+}
+
+@media screen and (max-width: 768px) {
+  .info-section {
+    flex-direction: column; 
+    padding: 2rem 1rem;
+    margin: 1rem 0;
+  }
+
+  .info-image-container {
+    margin-top: 1.5rem;     
+    order: -1;              
+  }
+
+  .info-image {
+    max-width: 70%;       
+  }
+
+  .info-text-box {
+     padding: 1.5rem;
+  }
+
+  .action-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    margin: 1rem 0;
+  }
+
+  .map-container {
+     min-height: 300px;
+     margin-bottom: 1.5rem; 
+  }
+
+  .action-text-box {
+    padding: 1.5rem; 
+  }
+
+  .form-section {
+    padding: 2rem 1rem; 
+    margin: 1rem 0 0 0;  
+ }
+ .google-form-iframe {
+    height: 1050px; 
+    max-width: 100%; 
+ }
 }

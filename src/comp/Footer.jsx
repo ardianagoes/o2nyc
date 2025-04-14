@@ -61,10 +61,7 @@ const Footer = () => {
         </Box>
       </Box>
       <Typography variant="body1" align="center">
-        ©{new Date().getFullYear()} O2NYC. 
-      </Typography>
-      <Typography variant="body1" align="center" className="thanks">
-        o2nyc.org@gmail.com
+        ©{new Date().getFullYear()} O2NYC 
       </Typography>
       <br />
     </Box>
