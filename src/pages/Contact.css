@@ -9,31 +9,161 @@
     width: 100vw;
     overflow-x: hidden;
     overflow-y: auto;
-    padding-top: 150px;
+    padding-top: 1rem;
     animation: fadeIn 1s ease-in-out;
 }
 
 .navbar-box {
-    margin-bottom: 100px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin-bottom: 5rem;
 }
 
-.content-block1 {
+.get-involved-title-container {
+    width: fit-content;
+    margin: 4rem auto; 
+    text-align: center;
+    padding: 0.8rem 2.5rem;
+    border-radius: 50px;
+    border: 3px solid white;
+    box-shadow: 0 4px 10px black
+  }
+  
+  .page-title.get-involved-title {
+    color: white;
+    font-family: "Kanit", serif !important;
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+    text-shadow: 2px 2px 5px black;
+    margin: 0; 
+  }
+
+  .content-Box{
+    margin-bottom: 5rem;
+  }
+
+  .content-block {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between; 
-    width: 100%; 
-    padding: 0 20px; 
+    align-items: center; 
+    justify-content: space-between;
+    width: 95%; 
+    max-width: 1200px; 
+    margin: 0.5rem auto 1rem auto;; 
+    padding: 3rem; 
+    gap: 2rem; 
+    border: 5px solid white; 
+    border-radius: 10px;   
+  }
+  
+.left-column {
+    display: flex;
+    flex: 1;
+    padding: 0;
+    justify-content: center; 
+    align-items: center;   
+    flex-direction: column; 
+    margin-left: 1rem;
 }
 
-.left-column, .right-column {
+  .right-column {
     display: flex;
-    flex: 1; 
-    padding: 20px; 
+    flex: 1;
+    padding: 0;
     justify-content: center;
     align-items: center;
-}
+    margin-right: 1rem;
+  }
+  
 
+.volunteer-image {
+    margin-top: 1rem;
+    max-width: 70%;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  .volunteer-text {
+    text-shadow: 0.1px 0.1px 0.1px black;
+    background-color: white;
+    color: #43b2b0;
+    padding: 2rem;
+    border-radius: 15px;
+    font-size: 1.4rem !important;
+    font-family: "Kanit", serif !important;
+    line-height: 1.6;
+    max-width: 75%;
+  }
+
+  .footer {
+    width: 100%;
+  }
+
+.form-button-section {
+    text-align: center;
+    padding: 2rem 1rem 3rem 1rem; 
+  }
+  
+  .sensor-info-section {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 3rem 4.5rem;
+    background-color: #43b2b0; 
+    color: #43b2b0; 
+    border: 5px solid white; 
+    border-radius: 10px;   
+  }
+  
+  .sensor-box{
+    justify-content: center;
+    align-self: center;
+  }
+  .sensor-text-column {
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .sensor-cost-text {
+    max-width: 50rem;
+    font-size: 1.5rem !important;
+    line-height: 1.6;
+    font-family: "Kanit", serif !important;
+    color: #43b2b0; 
+    text-align: left; 
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-shadow: 0.1px 0.1px 0.1px black;
+
+  }
+  
+  .sensor-image-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+  }
+  
+  .sensor-image {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .image-caption {
+    display: block; 
+    margin-top: 1rem;
+    font-family: "Kanit", serif !important;
+    font-size: 2rem !important;
+    color: white; 
+    text-align: center;
+    max-width: 80%; 
+    text-shadow: 1px 1px 1px black !important;
+  }  
+  
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -42,4 +172,62 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .content-block1 {
+      flex-direction: column; 
+      padding: 1rem; 
+      gap: 1rem;
+    }
+  
+    .left-column,
+    .right-column {
+      width: 100%; 
+      padding: 1rem 0;
+    }
+  
+    .volunteer-image {
+      max-width: 90%; 
+      margin-bottom: 1rem;
+    }
+    .get-involved-title-container {
+       margin-top: 80px; 
+       padding: 0.6rem 1.8rem;
+     }
+    .page-title.get-involved-title{
+       font-size: 2.2rem !important;
+    }
+    .form-button-section { 
+        padding: 1.5rem 1rem 2rem 1rem; 
+    }
+    .sensor-info-section {
+      flex-direction: column;
+      padding: 2rem 1rem;
+      gap: 1.5rem;
+    }
+  
+    .sensor-text-column { 
+        order: 2; 
+    } 
+    .sensor-image-column { 
+        order: 1; 
+    }
+    .sensor-cost-text { 
+        font-size: 1.2rem; text-align: center; max-width: 90%;
+    }
+    .sensor-image { 
+        max-width: 70%; 
+    }
+    .image-caption { 
+        max-width: 70%; font-size: 0.8rem; 
+    }
+  
+    .contact-cta-section { 
+        padding: 2rem 1rem; 
+    }
+
+    .contact-cta-text { 
+        font-size: 1.2rem; 
+    }
+  }
 

@@ -28,9 +28,8 @@
     align-items: center;
     justify-content: center;
     background-color: white;
-    margin-left: 10px;
     gap: 2.8rem;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 15px black;
     margin-left: auto; margin-right: auto;
 }
 

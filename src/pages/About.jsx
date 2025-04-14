@@ -57,11 +57,11 @@ export default function About() {
       </Box>
       <Box className="about-intro-section">
         <Typography variant="body1" component="p" className="about-intro-text">
-          O2-NYC is a New York City-based non-profit run entirely by high school students. Our journey began as a small
+          O₂NYC is a New York City-based non-profit run entirely by high school students. Our journey began as a small
           group of friends driven by a shared passion to fight environmental injustices. Initially, we aimed to create a
           platform where people could explore how environmental issues directly impact their local communities. However,
           we quickly uncovered a significant gap—many areas lacked accessible environmental data altogether. Determined
-          to bridge this gap, we founded O2-NYC to design affordable air quality sensors and deploy them in as many
+          to bridge this gap, we founded O₂NYC to design affordable air quality sensors and deploy them in as many
           locations as possible, empowering communities with the tools to understand and address air quality concerns.
         </Typography>
       </Box>

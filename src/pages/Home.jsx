@@ -103,7 +103,7 @@ export default function Home() {
           className={`action-text-box ${isActionVisible ? "visible" : ""}`} 
         >
           <Typography variant="body1" component="p">
-            To close this gap, O₂-NYC is designing and distributing affordable air sensors that provide real-time pollution data, equipping communities with the tools they need to advocate for cleaner air.
+            To close this gap, O₂NYC is designing and distributing affordable air sensors that provide real-time pollution data, equipping communities with the tools they need to advocate for cleaner air.
           </Typography>
           <Typography variant="h6" component="h3" sx={{ mt: 2, mb: 1 }}>
             🛠️ How We Make a Difference:
@@ -117,18 +117,29 @@ export default function Home() {
           <Typography variant="body1" component="p">
             ✔ Policy & Community Advocacy – Partnering with local officials, environmental justice groups, and community organizations to push for change
           </Typography>
+          <Typography variant="body1" component="p">
+          💨 Why It Matters: Pollutants like PM 2.5 and PM 10 are linked to asthma, lung disease, and cardiovascular issues, disproportionately affecting historically underserved communities.          </Typography>
         </Box>
       </Box>
-      <Box className="form-section">
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSdWXIyeg9juJ3evVO80iZkIrT-EylJh1OG3yYQbk6aqP__4JQ/viewform?embedded=true" // Corrected URL + embedded=true
-          className="google-form-iframe"
-          title="O2NYC Interest Form"
-          loading="lazy"
-        >
-          Loading…
-        </iframe>
+    <Box className="final-cta-section">
+
+    <Box className="left-column get-involved-bubble-container">
+      <Box className="get-involved-title-bubble">
+        <Typography variant="h3" component="h2" className="page-title get-involved-title">
+          Get Involved!
+        </Typography>
       </Box>
+    </Box>
+    <Box className="right-column form-embed-container">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdWXIyeg9juJ3evVO80iZkIrT-EylJh1OG3yYQbk6aqP__4JQ/viewform?embedded=true"
+        className="google-form-iframe" 
+        loading="lazy"
+      >
+        Loading…
+      </iframe>
+    </Box>
+</Box>
       <Box className="footer">
         <Footer />
       </Box>
