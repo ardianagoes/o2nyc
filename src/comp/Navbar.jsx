@@ -7,7 +7,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 90) {
         setScrolling(true);
       } else {
         setScrolling(false);
@@ -28,8 +28,6 @@ const Navbar = () => {
         </Box>
         <Link href="/home" className="selection-item">Home</Link>
         <Link href="/about" className="selection-item">About Us</Link>
-        <Link href="/research" className="selection-item">Research</Link>
-        <Link href="/resources" className="selection-item">Resources</Link>
         <Link href="/contact" className="selection-item">Join Us</Link>
       </Box>
     </Box>

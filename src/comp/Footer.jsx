@@ -1,51 +1,74 @@
-import React from "react";
-import "./Footer.css";
 import { Box, Link, Typography } from "@mui/material";
+import React, { useState, useEffect, useRef } from "react"; // Import hooks
+import "./Footer.css";
 
-const Contact = () => {
+const Footer = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const iconsRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        root: null, 
+        rootMargin: "0px",
+        threshold: 0.1, 
+      }
+    );
+    if (iconsRef.current) {
+      observer.observe(iconsRef.current);
+    }
+
+    return () => {
+      if (iconsRef.current) {
+        observer.unobserve(iconsRef.current);
+      }
+      observer.disconnect();
+    };
+  }, []); 
+
   return (
     <Box className="contact-box">
+      <Box className="footer-logo-container">
+        <img src="/images/logo.png" alt="O2NYC Logo" className="footer-main-logo" />
+      </Box>
+
       <Box className="icons-container">
-        <Box className="icons" align="center">
-          <Link
-            href="https://www.instagram.com/greenfuturesnyc/"
-            className="logo-ref"
-            target="_blank"
-          >
+        <Box
+          ref={iconsRef}
+          className={`icons ${isVisible ? "visible" : ""}`}
+          align="center"
+        >
+          <Link href="https://www.instagram.com/o2nyc_/" className="logo-ref" target="_blank" rel="noopener noreferrer">
             <img src={"/images/instagram.png"} alt="Instagram logo" />
           </Link>
-          <Link
-            href=""
-            className="logo-ref"
-            target="_blank"
-          >
+          <Link href="" className="logo-ref" target="_blank" rel="noopener noreferrer">
             <img src={"/images/facebook.png"} alt="Facebook logo" />
           </Link>
-          <Link
-            href=""
-            className="logo-ref"
-            target="_blank"
-          >
+          <Link href="" className="logo-ref" target="_blank" rel="noopener noreferrer">
             <img src={"/images/linktree.png"} alt="Linktree" />
           </Link>
-          <Link
-            href="https://github.com/ardianagoes/green-futures"
-            className="logo-ref"
-            target="_blank"
-          >
+          <Link href="https://github.com/ardianagoes/o2nyc" className="logo-ref" target="_blank" rel="noopener noreferrer">
             <img src={"/images/github.png"} alt="GitHub logo" />
           </Link>
         </Box>
       </Box>
       <Typography variant="body1" align="center">
-        ©2025 O2NYC.
+        ©{new Date().getFullYear()} O2NYC. 
       </Typography>
-      <Typography variant="body1" align="center" class="thanks">
-        o2nyc@gmail.com
+      <Typography variant="body1" align="center" className="thanks">
+        o2nyc.org@gmail.com
       </Typography>
       <br />
     </Box>
   );
 };
 
-export default Contact;
+export default Footer;

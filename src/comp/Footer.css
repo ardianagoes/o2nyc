@@ -1,66 +1,104 @@
-.footer {
-    font-weight: 400;
-    padding-top: 10px;
-    background-color: white;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-    margin: 0;
-    text-align: center;
-    color: black;
-    -webkit-text-stroke: 0.5px black;
-    border-top: 3px solid rgb(255, 255, 255);
-    overflow: hidden;
+.contact-box { 
+  font-weight: 400;
+  padding: 20px 10px; 
+  background-color: white;
+  position: relative; 
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  color: #215d4e;
+  -webkit-text-stroke: 0.5px black;
+  border-top: 3px solid rgb(255, 255, 255);
+  overflow: hidden; 
+}
+.footer-logo-container {
+  display: flex;          
+  justify-content: center;
+}
+
+.footer-main-logo {
+  max-width: 15rem;  
+  height: auto;      
+  display: block;    
+}
+
+@keyframes footer-fade-in {
+  from {
+    opacity: 0;
   }
-  
-  .icons-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    margin: 0;
+  to {
+    opacity: 1;
   }
-  
+}
+
+.icons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0; 
+  margin-bottom: 20px;
+}
+
+.icons {
+  display: flex;
+  gap: 20px; 
+  padding: 10px;
+  margin: 0px;
+  opacity: 0%;
+  opacity: 0;                       
+  transform: translateY(20px);      
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; 
+}
+
+.icons.visible {
+  opacity: 1;                       
+  transform: translateY(0);        
+}
+
+.logo-ref img {
+  height: 45px; 
+  width: 45px; 
+  margin: 0;
+  padding: 0;
+  display: block; 
+  transition: transform 0.2s ease-in-out; 
+}
+
+.logo-ref img:hover {
+  transform: scale(1.1);
+}
+
+.contact-box .MuiTypography-body1 { 
+  color: #215d4e;
+  -webkit-text-stroke: 0.5px black; 
+  margin-top: 5px; 
+}
+
+.contact-box .thanks { 
+   margin-top: 2px;
+}
+
+.divider {
+  width: 2px;
+  background-color: white;
+  height: 5em;
+  z-index: 1;
+  align-self: stretch;
+}
+
+@media screen and (max-width: 430px) {
+  .contact-box {
+    padding-left: 1em; 
+    padding-right: 1em;
+  }
+  .footer-main-logo {
+     max-width: 140px; 
+  }
   .icons {
-    display: flex;
-    gap: 15px;
-    padding: 10px;
-    margin: 0;
+    gap: 15px; 
   }
-  
   .logo-ref img {
-    height: 40px;
-    width: 40px;
-    margin: 0;
-    padding: 0px;
+    height: 35px; 
+    width: 35px;
   }
-  
-  .developer-columns {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    padding-bottom: 10px;
-  }
-  
-  .developer-column {
-    text-align: center;
-    padding: 0 20px; 
-  }
-  
-  .divider {
-    width: 2px;
-    background-color: white;
-    height: 5em; 
-    z-index: 1;
-    align-self: stretch; 
-  }
-  
-  @media screen and (max-width: 430px) {
-    .contact-box {
-      padding-left: 2em;
-    }
-  }
-  
+}

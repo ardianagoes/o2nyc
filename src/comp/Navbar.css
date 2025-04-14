@@ -27,8 +27,9 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    background-color: #6eb2d1;
+    background-color: white;
     margin-left: 10px;
+    gap: 2.8rem;
     box-shadow: 0 0 15px rgba(0, 0, 0, 1);
     margin-left: auto; margin-right: auto;
 }
@@ -39,18 +40,17 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+}       
+    
+.logo-container {   
+    flex: 0 0 auto; 
+    display: flex;  
+    align-items: center;    
+    justify-content: center;    
 }   
-
-.logo-container {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-right: 3rem;
-}
-
+    
 .website-logo {
-    max-width: 7em;
+    max-width: 12em;
     display: block;
     height: auto;
 }
@@ -60,9 +60,7 @@
     position: relative;
     display: inline-block;
     font-size: 1.4rem !important;
-    padding-right: 2.8rem;
-    color: white !important;
-    text-shadow: 2px 2px 5px black;
+    color: #215d4e !important;
     font-family: "Kanit", serif !important;
     font-weight: 400 !important;
     font-style: normal !important;
@@ -83,15 +81,15 @@
   .selection-item::after {
     content: "";
     position: absolute;
-    left: 30%;
+    left: 50%;
     bottom: -5px;
     width: 0;
     height: 3px;
-    background-color: white;
+    background-color: #215d4e;
     transition: all 0.3s ease-in-out;
     transform: translateX(-50%);
 }
 
 .selection-item:hover::after {
-    width: 50%;
+    width: 75%;
 }
