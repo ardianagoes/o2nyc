@@ -50,9 +50,6 @@ const Footer = () => {
             <img src={"/images/instagram.png"} alt="Instagram logo" />
           </Link>
           <Link href="" className="logo-ref" target="_blank" rel="noopener noreferrer">
-            <img src={"/images/facebook.png"} alt="Facebook logo" />
-          </Link>
-          <Link href="" className="logo-ref" target="_blank" rel="noopener noreferrer">
             <img src={"/images/linktree.png"} alt="Linktree" />
           </Link>
           <Link href="https://github.com/ardianagoes/o2nyc" className="logo-ref" target="_blank" rel="noopener noreferrer">
