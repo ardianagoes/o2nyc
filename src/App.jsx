@@ -24,14 +24,14 @@ const App = () => {
     <Box style={{ height: windowHeight }}>
       <BrowserRouter>
         <Routes>
-        <Analytics />
-        <SpeedInsights />
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
+      <Analytics />
+      <SpeedInsights />
     </Box>
   );
 };
