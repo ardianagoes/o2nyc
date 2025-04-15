@@ -278,9 +278,11 @@
 @media screen and (max-width: 768px) {
 
 	.fixed-banner-container {
-		background-size: contain;
-		background-attachment: scroll;
 		background-image: url('/public/images/banner2.png'); 
+		background-attachment: scroll; 
+		background-position: center center; 
+		background-repeat: no-repeat; 
+		background-size: cover;
 	}
 	
 	.home-image-caption {
