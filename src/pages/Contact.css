@@ -177,7 +177,7 @@
 
 @media screen and (max-width: 768px) {
     .content-block {
-      max-width: 380px;
+      max-width: 300px;
       flex-direction: column; 
       padding: 1rem; 
       gap: 1rem;
@@ -211,7 +211,7 @@
         padding: 1.5rem 1rem 2rem 1rem; 
     }
     .sensor-info-section {
-      max-width: 380px;
+      max-width: 300px;
       flex-direction: column;
       padding: 2rem 1rem;
       gap: 1.5rem;

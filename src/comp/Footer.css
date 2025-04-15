@@ -73,6 +73,8 @@
   color: #215d4e;
   -webkit-text-stroke: 0.5px #43b2b0; 
   margin-top: 5px; 
+  font-weight: 500;
+  font-size: 1.5rem;
 }
 
 .contact-box .thanks { 
