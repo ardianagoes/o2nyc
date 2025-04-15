@@ -108,13 +108,16 @@
   
   .sensor-info-section {
     display: flex;
-    align-items: center;
-    gap: 2.5rem;
-    padding: 3rem 4.5rem;
-    background-color: #43b2b0; 
-    color: #43b2b0; 
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-between;
+    width: 95%; 
+    max-width: 1200px; 
+    margin: 0.5rem auto 1rem auto;; 
+    padding: 3rem; 
+    gap: 2rem; 
     border: 5px solid white; 
-    border-radius: 10px;   
+    border-radius: 10px;    
   }
   
   .sensor-box{
@@ -147,7 +150,7 @@
   }
   
   .sensor-image {
-    max-width: 100%; 
+    max-width: 50%; 
     height: auto;
     border-radius: 8px;
   }
@@ -173,7 +176,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .content-block1 {
+    .content-block {
       flex-direction: column; 
       padding: 1rem; 
       gap: 1rem;

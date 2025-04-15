@@ -122,11 +122,21 @@ export default function Home() {
         </Box>
       </Box>
     <Box className="final-cta-section">
-
     <Box className="left-column get-involved-bubble-container">
       <Box className="get-involved-title-bubble">
         <Typography variant="h3" component="h2" className="page-title get-involved-title">
           Get Involved!
+        </Typography>
+      </Box>
+      <Box className="get-involved-blurb-bubble">
+        <Typography variant="h6" component="h3" className="blurb-heading">
+          How You Can Help
+        </Typography>
+        <Typography variant="body1" component="p" className="blurb-point">
+          • Host a Sensor – Place an air quality sensor in your school, business, or community center
+        </Typography>
+        <Typography variant="body1" component="p" className="blurb-point">
+          • Volunteer & help us fundraise to distribute sensors throughout NYC!
         </Typography>
       </Box>
     </Box>

@@ -96,7 +96,7 @@
 .info-text-box .MuiTypography-root {
   color: #43b2b0;
   font-size: 1.3rem;
-  text-shadow: 0.1px 0.1px 0.1px black;
+  text-shadow: 0.2px 0.2px 0.2px black;
   font-family: "Kanit", serif !important;
   font-weight: 400 !important;
   font-style: normal !important;
@@ -133,7 +133,7 @@
   padding: 2.5rem;
   border-radius: 8px;
   color: white; 
-  text-shadow: 0.1px 0.1px 0.1px black;
+  text-shadow: 0.2px 0.2px 0.2px black;
   opacity: 0;
   transform: translateX(40rem); 
   transition: opacity 1.5s ease-out, transform 1.5s ease-out;
@@ -170,8 +170,10 @@
 .get-involved-bubble-container { 
   flex: 1; 
   display: flex; 
+  flex-direction: column;
   justify-content: center; 
   align-items: center; 
+  gap: 2rem;
 }
 
 .get-involved-title-bubble {
@@ -193,6 +195,37 @@
   margin: 0;
   padding: 0;
   line-height: 1.2;
+}
+
+.get-involved-blurb-bubble {
+  background-color: white;
+  border: 3px solid #43b2b0; 
+  border-radius: 15px;    
+  padding: 1.8rem 2.2rem;   
+  box-shadow: 0 4px 12px black;
+  width: 100%;            
+  max-width: 550px;     
+  text-align: left;     
+  color: #333;            
+}
+
+.blurb-heading {
+  font-family: "Kanit", serif !important;
+  font-weight: 600 !important;
+  font-size: 1.5rem !important;
+  color: #43b2b0; 
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.blurb-point {
+  font-family: "Kanit", serif !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  color: #333;
+  margin-bottom: 0.6rem; 
+  line-height: 1.5;
+  padding-left: 0.5rem; 
 }
 
 .map-container {
@@ -222,47 +255,135 @@
 }
 
 
+/* --- Tablet and Smaller (e.g., <= 768px) --- */
 @media screen and (max-width: 768px) {
+  .motto-text, .motto-section .MuiTypography-h5 {
+    padding: 1rem;
+    font-size: 1.2rem !important;
+  }
+
   .info-section {
-    flex-direction: column; 
-    padding: 2rem 1rem;
-    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+    gap: 2rem;
+    padding: 3rem 2rem;
+    background-color: #43b2b0; 
   }
-
-  .info-image-container {
-    margin-top: 1.5rem;     
-    order: -1;              
-  }
-
-  .info-image {
-    max-width: 70%;       
-  }
-
+   
   .info-text-box {
-     padding: 1.5rem;
+    letter-spacing: 3px;
+    flex: 1;                  
+    background-color: white;
+    padding: 2.5rem;        
+    border-radius: 8px;       
+    color: #43b2b0;             
+    opacity: 0;
+    transform: translateX(-10rem); 
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+    visibility: hidden; 
+  }
+  
+  .info-text-box.visible {
+    opacity: 1;
+    transform: translateX(0rem); 
+    visibility: visible;
   }
 
   .action-section {
+    display: flex;
     flex-direction: column;
-    padding: 2rem 1rem;
-    margin: 1rem 0;
+    align-items: stretch; 
+    gap: 2rem;
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    background-color: white;
+  }
+  
+  .action-text-box {
+    flex: 1; 
+    background-color: #43b2b0; 
+    padding: 2.5rem;
+    border-radius: 8px;
+    color: white; 
+    text-shadow: 0.2px 0.2px 0.2px black;
+    opacity: 0;
+    transform: translateX(10rem); 
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+    visibility: hidden;
+  }
+  
+  .action-text-box.visible {
+    opacity: 1;
+    transform: translateX(0rem); 
+    visibility: visible;
   }
 
   .map-container {
-     min-height: 300px;
-     margin-bottom: 1.5rem; 
-  }
-
-  .action-text-box {
-    padding: 1.5rem; 
-  }
-
-  .form-section {
-    padding: 2rem 1rem; 
-    margin: 1rem 0 0 0;  
+    width: 100%; 
+    height: 350px; 
+    margin-bottom: 0;
+    flex: none; 
  }
- .google-form-iframe {
-    height: 1050px; 
+
+  .map-iframe {
+      height: 100%; 
+  }
+
+  .final-cta-section {
+    margin-right: 1rem;
+    flex-direction: column; 
+    padding: 0.5rem 3rem;
+    gap: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  .get-involved-bubble-container {
+    gap: 1.5rem; 
+    width: 100%;
+  }
+
+  .get-involved-title-bubble {
+    padding: 1rem 2rem; 
+  }
+
+  .get-involved-title {
+    font-size: 2.2rem !important; 
+  }
+
+  .get-involved-blurb-bubble {
+    max-width: 95%; 
+    padding: 1.2rem 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .blurb-heading { 
+    font-size: 1.3rem !important; 
+  }
+
+  .blurb-intro { 
+    font-size: 1rem !important; 
+  }
+
+  .blurb-point { 
+    font-size: 0.9rem !important; 
+  }
+
+  .form-embed-container {
+    margin-left: 2.5rem;
+    min-width: unset; 
+    width: 100%; 
+  }
+
+  .google-form-iframe {
+    height: 900px; 
     max-width: 100%; 
- }
+    border-radius: 10px;
+  }
+
+  .navbar-box {
+    margin-bottom: 0;
+  }
+  
+
 }

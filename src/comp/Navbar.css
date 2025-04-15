@@ -53,15 +53,67 @@
     margin-right: 3rem;
   }
 
+  .hamburger-icon {
+    display: none;
+    margin-right: 2rem;
+  }
   
-.selection {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  .mobile-menu {
+    text-decoration: none !important;
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    left: 0;
     width: 100%;
-}       
-    
+    background-color: white;
+    box-shadow: 0 4px 6px black;
+    padding: 1rem 0;
+    max-height: 0; 
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+    z-index: 999; 
+  }
+  
+  .mobile-menu.open {
+    display: block;
+    max-height: 70vh;
+    opacity: 1;
+    overflow-y: auto; 
+  }
+  
+  .mobile-menu-item {
+    display: block;
+    padding: 1rem 1.5rem;
+    font-family: "Kanit", serif;
+    font-size: 1.2rem;
+    color: #215d4e;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid white;
+  }
+  .mobile-menu-item:last-child {
+    border-bottom: none;
+  }
+  .mobile-menu-item.social { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .mobile-menu-icon { 
+     height: 20px;
+     width: 20px;
+  }
+  
+  .mobile-menu-extras {
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+.navbar-logo-mobile-visible {
+    flex-shrink: 0;
+ }
 
 .logo-container {   
     flex: 0 0 auto; 
@@ -83,9 +135,9 @@
     font-size: 1.4rem !important;
     color: #215d4e !important;
     font-family: "Kanit", serif !important;
-    font-weight: 400 !important;
+    font-weight: 500 !important;
     font-style: normal !important;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
 }
 
 .selection-item:hover {
@@ -116,11 +168,42 @@
 }
 
 .navbar-social-icon {
-    height: 50px; 
-    width: 50px;
+    margin-top: 1rem;
+    height: 100px; 
+    width: 100px;
     display: block; 
     transition: transform 0.2s ease-in-out; 
  }
  .navbar-social-icon:hover {
     transform: scale(1.1); 
+ }
+
+ @media screen and (max-width: 900px) {
+    .navbar-container {
+        padding: 0.75rem 0.5rem; 
+        justify-content: space-between;
+    }
+
+    .navbar-left > .selection-item { 
+        display: none;
+    }
+    .navbar-right { 
+        display: none;
+    }
+
+    .navbar-left {
+        margin-left: 0; 
+        gap: 0; 
+    }
+
+    .hamburger-icon {
+        display: inline-flex !important; 
+        margin-right: 2rem !important;
+    }
+
+    .website-logo {
+        max-width: 8em; 
+        margin-left: 1rem !important;
+    }
+    
  }
