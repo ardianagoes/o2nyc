@@ -149,6 +149,7 @@
 	opacity: 1;
 	transform: translateX(-0.2rem);
 	visibility: visible;
+	border-radius: 15px;
 }
 
 .action-text-box .MuiTypography-root {
@@ -262,7 +263,7 @@
 
 .home-image-caption {
   display: block;
-  margin-top: 2rem !important;
+  margin-top: 1rem !important;
   font-family: "Kanit", serif !important;
   font-size: 2rem !important;
   color: white;
@@ -270,6 +271,7 @@
   max-width: 60% !important;
   text-shadow: 1px 1px 1px black !important;
   margin-left: 1rem !important;
+  line-height: 2.5rem !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -278,7 +280,8 @@
     margin: 0 !important;
     margin-top: 1rem !important;
     max-width: 80% !important;
-    font-size: 1.5rem !important;
+    font-size: 1.4rem !important;
+	line-height: 2rem !important;
   }
 
 	.motto-text,
@@ -314,7 +317,8 @@
 		transform: translateX(0rem);
 		visibility: visible;
 		text-align: center;
-    max-width: 80%;
+    	max-width: 80%;
+		border-radius: 15px;
 	}
 
 	.action-section {
@@ -359,7 +363,6 @@
 	}
 
 	.final-cta-section {
-		margin-right: 1rem;
 		flex-direction: column;
 		padding: 0.5rem 3rem;
 		gap: 2rem;
@@ -399,7 +402,7 @@
 	}
 
 	.form-embed-container {
-		margin-left: 2.5rem;
+		margin-left: 0.5rem;
 		min-width: unset;
 		width: 100%;
 	}

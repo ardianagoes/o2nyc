@@ -88,7 +88,7 @@ export default function Home() {
             alt="Air quality map"
             className="info-image"/>
           <Typography variant="caption" display="block" className="home-image-caption">
-          Ambient PM2.5 concentrations attributable to diesel truck tailpipe emissions within New York City.
+          Image Courtesy of The Real Urban Emissions Initiative 
           </Typography>
         </Box>
       </Box>
