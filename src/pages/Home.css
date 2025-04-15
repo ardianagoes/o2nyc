@@ -279,6 +279,7 @@
 
 	.fixed-banner-container {
 		background-size: contain;
+		background-attachment: scroll;
 		background-image: url('/public/images/banner2.png'); 
 	}
 	
