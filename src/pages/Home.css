@@ -288,6 +288,7 @@
     opacity: 1;
     transform: translateX(0rem); 
     visibility: visible;
+    text-align: center;
   }
 
   .action-section {
@@ -317,6 +318,7 @@
     opacity: 1;
     transform: translateX(0rem); 
     visibility: visible;
+    text-align: center;
   }
 
   .map-container {
@@ -335,7 +337,7 @@
     flex-direction: column; 
     padding: 0.5rem 3rem;
     gap: 2rem;
-    margin-top: 0.5rem;
+    margin-top: 0.5rem; 
   }
 
   .get-involved-bubble-container {
@@ -355,6 +357,7 @@
     max-width: 95%; 
     padding: 1.2rem 1.5rem;
     margin-top: 1rem;
+    text-align: center;
   }
 
   .blurb-heading { 

@@ -11,11 +11,11 @@
   border-top: 3px solid white;
   overflow: hidden; 
 }
+
 .footer-logo-container {
   display: flex;          
   justify-content: center;
 }
-
 
 .footer-main-logo {
   max-width: 15rem;  
@@ -93,7 +93,7 @@
   }
 
   .footer-logo-container {
-    margin-right: 1rem;
+    margin-right: 1.2rem;
   }
 
   .icons{

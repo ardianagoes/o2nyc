@@ -149,13 +149,21 @@
     flex-grow: 1; 
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
+    .about-intro-section {
+      margin: 0 auto;
+      padding: 2rem;
+      margin-top: 2rem;
+      max-width: 350px;
+      font-size: 1rem !important;
+    }
+
     .role-title {
-        font-size: 2rem !important;
+        font-size: 3rem !important;
         margin-bottom: 1.5rem;
     }
     .members-row {
-        gap: 1.5rem;
+        gap: 2rem;
     }
     .member-card {
         width: calc(100% - 2rem); 
