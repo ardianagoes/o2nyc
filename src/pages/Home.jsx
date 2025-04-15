@@ -82,10 +82,14 @@ export default function Home() {
         </Typography>
         </Box>
         <Box className="info-image-container">
+          <Box></Box>
           <img
-            src="/images/sensor.png" 
-            alt="Air quality sensor diagram"
+            src="/images/map.png" 
+            alt="Air quality map"
             className="info-image"/>
+          <Typography variant="caption" display="block" className="home-image-caption">
+          Ambient PM2.5 concentrations attributable to diesel truck tailpipe emissions within New York City.
+          </Typography>
         </Box>
       </Box>
        <Box className="action-section">
@@ -133,10 +137,13 @@ export default function Home() {
           How You Can Help
         </Typography>
         <Typography variant="body1" component="p" className="blurb-point">
-          • Host a Sensor – Place an air quality sensor in your school, business, or community center
+          • Host a Sensor – Place an air quality sensor in your school, business, or community center.
         </Typography>
         <Typography variant="body1" component="p" className="blurb-point">
           • Volunteer & help us fundraise to distribute sensors throughout NYC!
+        </Typography>
+        <Typography variant="body1" component="p" className="blurb-point">
+          • Collaborate with us to host volunteering and educational events on environmental awareness and pollution.
         </Typography>
       </Box>
     </Box>

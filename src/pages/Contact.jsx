@@ -46,6 +46,9 @@ export default function Contact() {
             alt="O2NYC Air Quality Sensor Diagram"
             className="sensor-image"
           />
+            <Typography variant="caption" display="block" className="image-caption">
+            Air Quality Sensor
+          </Typography>
         </Box>
       </Box>
       </Box>

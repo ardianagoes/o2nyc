@@ -63,6 +63,7 @@
 }
 
 .info-text-box {
+  max-width: 30%;
 	letter-spacing: 3px;
 	flex: 1;
 	background-color: white;
@@ -70,7 +71,7 @@
 	border-radius: 8px;
 	color: #43b2b0;
 	opacity: 0;
-	transform: translateX(-50rem);
+	transform: translateX(-30rem);
 	transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 	visibility: hidden;
 }
@@ -82,12 +83,16 @@
 }
 
 .info-image-container {
+  display: flex;
+  flex-direction: column;
 	flex: 1;
 	text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .info-image {
-	width: 20rem;
+	width: 40rem;
 	height: auto;
 	display: inline-block;
 	border-radius: 1px;
@@ -255,7 +260,26 @@
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+.home-image-caption {
+  display: block;
+  margin-top: 2rem !important;
+  font-family: "Kanit", serif !important;
+  font-size: 2rem !important;
+  color: white;
+  text-align: center;
+  max-width: 60% !important;
+  text-shadow: 1px 1px 1px black !important;
+  margin-left: 1rem !important;
+}
+
 @media screen and (max-width: 768px) {
+
+  .home-image-caption {
+    margin: 0 !important;
+    margin-top: 1rem !important;
+    max-width: 80% !important;
+    font-size: 1.5rem !important;
+  }
 
 	.motto-text,
 	.motto-section .MuiTypography-h5 {
@@ -280,7 +304,7 @@
 		border-radius: 8px;
 		color: #43b2b0;
 		opacity: 0;
-		transform: translateX(-10rem);
+		transform: translateX(-15rem);
 		transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 		visibility: hidden;
 	}
@@ -290,6 +314,7 @@
 		transform: translateX(0rem);
 		visibility: visible;
 		text-align: center;
+    max-width: 80%;
 	}
 
 	.action-section {
@@ -388,4 +413,8 @@
 	.navbar-box {
 		margin-bottom: 0;
 	}
+
+  .info-image {
+    width: 22rem;
+  }
 }
