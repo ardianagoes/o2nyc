@@ -4,6 +4,9 @@ import { Box } from "@mui/material";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
+
 
 const App = () => {
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
@@ -21,6 +24,8 @@ const App = () => {
     <Box style={{ height: windowHeight }}>
       <BrowserRouter>
         <Routes>
+        <Analytics />
+        <SpeedInsights />
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Home />} />
           <Route path="/about" element={<About />} />
