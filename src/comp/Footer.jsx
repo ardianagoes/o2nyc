@@ -39,7 +39,6 @@ const Footer = () => {
       <Box className="footer-logo-container">
         <img src="/images/logo.png" alt="O2NYC Logo" className="footer-main-logo" />
       </Box>
-
       <Box className="icons-container">
         <Box
           ref={iconsRef}

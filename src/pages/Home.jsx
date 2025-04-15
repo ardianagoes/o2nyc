@@ -62,11 +62,11 @@ export default function Home() {
       <Box className="navbar-box">
         <Navbar />
       </Box>
-      <img
-        src="/images/banner.png" 
-        alt="Homepage Banner"     
-        className="home-banner-image"
-      />
+      <Box
+        className="fixed-banner-container"
+        aria-label="Homepage Banner" 
+      >
+      </Box>
       <Box className="motto-section">
         <Typography variant="h5" component="p" className="motto-text">
           Our motto is simple, everyone deserves the right to breathe clean quality air, regardless of their income, race, or zip code.

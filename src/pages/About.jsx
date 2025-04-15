@@ -44,7 +44,6 @@ export default function About() {
       </Box>
     );
   }
-
   return (
     <Box className="about-page">
       <Box className="navbar-box">

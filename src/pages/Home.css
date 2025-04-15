@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
 .home-page {
 	display: flex;
 	flex-direction: column;
@@ -24,12 +23,14 @@
 	}
 }
 
-.home-banner-image {
-	height: auto;
-	display: block;
-	object-fit: cover;
-	width: 100%;
-	margin-top: 1rem;
+.fixed-banner-container {
+    height: 100vh; 
+    width: 100%;
+    background-image: url('/public/images/banner.png'); 
+    background-attachment: fixed; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
 }
 
 .motto-section {
@@ -276,13 +277,18 @@
 
 @media screen and (max-width: 768px) {
 
-  .home-image-caption {
-    margin: 0 !important;
-    margin-top: 1rem !important;
-    max-width: 80% !important;
-    font-size: 1.4rem !important;
-	line-height: 2rem !important;
-  }
+	.fixed-banner-container {
+		background-size: contain;
+		background-image: url('/public/images/banner2.png'); 
+	}
+	
+	.home-image-caption {
+		margin: 0 !important;
+		margin-top: 1rem !important;
+		max-width: 80% !important;
+		font-size: 1.4rem !important;
+		line-height: 2rem !important;
+	}
 
 	.motto-text,
 	.motto-section .MuiTypography-h5 {
@@ -417,7 +423,7 @@
 		margin-bottom: 0;
 	}
 
-  .info-image {
-    width: 22rem;
-  }
+	.info-image {
+		width: 22rem;
+	}
 }

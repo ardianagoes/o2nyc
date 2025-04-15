@@ -7,7 +7,6 @@ import Contact from "./pages/Contact";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
-
 const App = () => {
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
@@ -35,5 +34,4 @@ const App = () => {
     </Box>
   );
 };
-
 export default App;
