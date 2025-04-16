@@ -34,7 +34,11 @@
 }
 
 .motto-section {
-	padding: 3rem 1.5rem;
+	background-image: url("./pattern1.svg") !important;
+	background-size: cover;
+	background-color: #43b2b0;
+	background-repeat: no-repeat; 
+	padding: 5rem 1.5rem;
 	margin: 0;
 	text-align: center;
 	background-color: white;
@@ -42,29 +46,37 @@
 
 .motto-text,
 .motto-section .MuiTypography-h5 {
-	background-color: #43b2b0;
+	background-color: white;
 	padding: 5rem;
 	border-radius: 1rem;
 	max-width: 850px;
 	margin: 0 auto;
-	color: white;
+	color: #43b2b0;
 	font-family: "Kanit", serif !important;
 	font-weight: 500 !important;
 	font-size: 1.9rem !important;
 	line-height: 1.6;
-	text-shadow: 1px 1px 3px black;
+	text-shadow: 0.2px 0.2px px black;
+	box-shadow: 0px 4px 20px black;
+
 }
 
 .info-section {
+	padding-top: 3rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	background-image: url("./pattern2.svg") !important;
+	background-size: cover;
+	background-color: #43b2b0;
+	background-repeat: no-repeat; 	
 	display: flex;
 	align-items: center;
 	gap: 2rem;
 	padding: 3rem 2rem;
-	background-color: #43b2b0;
 }
 
 .info-text-box {
-  max-width: 30%;
+  	max-width: 30%;
 	letter-spacing: 3px;
 	flex: 1;
 	background-color: white;
@@ -81,15 +93,18 @@
 	opacity: 1;
 	transform: translateX(10rem);
 	visibility: visible;
+	margin-right: 5rem;
+	box-shadow: 0px 4px 20px black;
 }
 
 .info-image-container {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 	flex: 1;
 	text-align: center;
-  justify-content: center;
-  align-items: center;
+	justify-content: center;
+	align-items: center;
+	margin-left: 5rem;
 }
 
 .info-image {
@@ -125,12 +140,17 @@
 }
 
 .action-section {
+	padding-top: 3rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	background-image: url("./pattern3.svg") !important;
+	background-size: cover;
+	background-color: #43b2b0;
+	background-repeat: no-repeat;
 	display: flex;
 	align-items: stretch;
 	gap: 2rem;
-	padding: 3rem 2rem;
-	margin: 2rem 0;
-	background-color: white;
+	margin: 0;
 }
 
 .action-text-box {
@@ -151,12 +171,17 @@
 	transform: translateX(-0.2rem);
 	visibility: visible;
 	border-radius: 15px;
+	box-shadow: 0px 4px 20px black;
+}
+
+.action-heading{
+	font-size: 1.7rem !important;
 }
 
 .action-text-box .MuiTypography-root {
 	color: inherit;
 	font-family: "Kanit", serif;
-	margin-bottom: 0.75rem;
+	margin-top: 1rem;
 	font-size: 1.25rem;
 }
 
@@ -167,6 +192,9 @@
 }
 
 .final-cta-section {
+	background-image: url("./pattern4.svg") !important;
+	background-size: cover;
+	background-color: #43b2b0;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -209,7 +237,7 @@
 	background-color: white;
 	border: 3px solid #43b2b0;
 	border-radius: 15px;
-	padding: 1.8rem 2.2rem;
+	padding: 3rem 3rem;
 	box-shadow: 0 4px 12px black;
 	width: 100%;
 	max-width: 550px;
@@ -220,16 +248,16 @@
 .blurb-heading {
 	font-family: "Kanit", serif !important;
 	font-weight: 600 !important;
-	font-size: 1.5rem !important;
+	font-size: 1.8rem !important;
 	color: #43b2b0;
-	margin-bottom: 0.75rem;
+	margin-bottom: 1.2rem !important;
 	text-align: center;
 }
 
 .blurb-point {
 	font-family: "Kanit", serif !important;
 	font-weight: 400 !important;
-	font-size: 1rem !important;
+	font-size: 1.2rem !important;
 	color: #333;
 	margin-bottom: 0.6rem;
 	line-height: 1.5;
@@ -263,19 +291,23 @@
 }
 
 .home-image-caption {
-  display: block;
-  margin-top: 1rem !important;
-  font-family: "Kanit", serif !important;
-  font-size: 2rem !important;
-  color: white;
-  text-align: center;
-  max-width: 60% !important;
-  text-shadow: 1px 1px 1px black !important;
-  margin-left: 1rem !important;
-  line-height: 2.5rem !important;
+	display: block;
+	margin-top: 0.3rem !important;
+	font-family: "Kanit", serif !important;
+	font-size: 1rem !important;
+	color: black !important;
+	text-align: center;
+	max-width: 60% !important;
+	text-shadow: 1.2px 1.2px 5px white !important;
+	margin-left: 1rem !important;
+	line-height: 2.5rem !important;
 }
 
 @media screen and (max-width: 768px) {
+
+	.info-image-container {
+		margin: 0;
+	}
 
 	.fixed-banner-container {
 		background-image: url('/public/images/banner2.png'); 
@@ -328,6 +360,7 @@
 		text-align: center;
     	max-width: 80%;
 		border-radius: 15px;
+		margin: 0;
 	}
 
 	.action-section {
@@ -336,7 +369,6 @@
 		align-items: stretch;
 		gap: 2rem;
 		padding: 3rem 2rem;
-		margin: 2rem 0;
 		background-color: white;
 	}
 

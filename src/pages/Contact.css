@@ -33,6 +33,13 @@
 	box-shadow: 0 4px 10px black
 }
 
+.contact-content{
+	background-image: url("./pattern6.svg") !important;
+	background-size: cover;
+	background-color: #43b2b0;
+	background-repeat: no-repeat;
+}
+
 .page-title.get-involved-title {
 	color: white;
 	font-family: "Kanit", serif !important;

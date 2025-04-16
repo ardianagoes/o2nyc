@@ -9,6 +9,7 @@ export default function Contact() {
         <Box className="navbar-box">
       <Navbar/>
       </Box>
+      <Box className="contact-content">
         <Box className="get-involved-title-container">
         <Typography variant="h3" component="h1" className="page-title get-involved-title">
           Get Involved!
@@ -79,6 +80,7 @@ export default function Contact() {
         >
           Contact Form
         </Button>
+      </Box>
       </Box>
       <Box className="footer">
         <Footer />

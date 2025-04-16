@@ -1,5 +1,5 @@
 import "./Home.css";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Link } from "@mui/material";
 import Navbar from "../comp/Navbar";
 import Footer from "../comp/Footer";
 import React, { useState, useEffect, useRef } from "react";
@@ -87,9 +87,23 @@ export default function Home() {
             src="/images/map.png" 
             alt="Air quality map"
             className="info-image"/>
-          <Typography variant="caption" display="block" className="home-image-caption">
-          Image Courtesy of The Real Urban Emissions Initiative 
-          </Typography>
+            <Link
+            href="https://www.trueinitiative.org/media/792240/true-nyc-report-fv.pdf"
+            target="_blank" 
+            rel="noopener noreferrer" 
+            variant="caption" 
+            display="block"   
+            className="home-image-caption"
+            sx={{
+              textDecoration: 'underline', 
+              color: 'white',    
+              '&:hover': {
+                 textDecoration: 'underline' 
+              }
+            }}
+          >
+            Source: The Real Urban Emissions Initiative
+          </Link>
         </Box>
       </Box>
        <Box className="action-section">
@@ -107,22 +121,19 @@ export default function Home() {
           className={`action-text-box ${isActionVisible ? "visible" : ""}`} 
         >
           <Typography variant="body1" component="p">
-            To close this gap, O₂NYC is designing and distributing affordable air sensors that provide real-time pollution data, equipping communities with the tools they need to advocate for cleaner air.
-          </Typography>
-          <Typography variant="h6" component="h3" sx={{ mt: 2, mb: 1 }}>
-            🛠️ How We Make a Difference:
-          </Typography>
-          <Typography variant="body1" component="p" sx={{ mb: 0.5 }}>
-            ✔ Affordable Air Sensors – Low-cost devices tracking air pollution
+          To close this gap, O₂-NYC is designing and distributing affordable air sensors that provide real-time pollution data, equipping communities with the tools they need to advocate for cleaner air.          </Typography>
+          <Typography className="action-heading" variant="h1" component="h3" sx={{ mt: 2, mb: 1 }}>
+          How We Make a Difference:
           </Typography>
           <Typography variant="body1" component="p" sx={{ mb: 0.5 }}>
-            ✔ GIS Data Mapping – Live, interactive pollution tracking for public access
+          Affordable Air Sensors – Low-cost devices tracking air  pollution
+          </Typography>
+          <Typography variant="body1" component="p" sx={{ mb: 0.5 }}>
+          GIS Data Mapping – Live, interactive pollution tracking for public access
           </Typography>
           <Typography variant="body1" component="p">
-            ✔ Policy & Community Advocacy – Partnering with local officials, environmental justice groups, and community organizations to push for change
+          Policy & Community Advocacy – Partnering with local officials, environmental justice groups, and community organizations to push for change through the usage of our data
           </Typography>
-          <Typography variant="body1" component="p">
-          💨 Why It Matters: Pollutants like PM 2.5 and PM 10 are linked to asthma, lung disease, and cardiovascular issues, disproportionately affecting historically underserved communities.          </Typography>
         </Box>
       </Box>
     <Box className="final-cta-section">
