@@ -126,13 +126,13 @@ export default function Home() {
           How We Make a Difference:
           </Typography>
           <Typography variant="body1" component="p" sx={{ mb: 0.5 }}>
-          Affordable Air Sensors – Low-cost devices tracking air  pollution
+          Affordable Air Sensors – Low-cost devices tracking air pollution city wide
           </Typography>
           <Typography variant="body1" component="p" sx={{ mb: 0.5 }}>
-          GIS Data Mapping – Live, interactive pollution tracking for public access
+          GIS Data Mapping – Live and interactive pollution tracking for everyone to see
           </Typography>
           <Typography variant="body1" component="p">
-          Policy & Community Advocacy – Partnering with local officials, environmental justice groups, and community organizations to push for change through the usage of our data
+          Policy & Community Advocacy – Partnering with local officials, environmental justice groups, and community organizations to push for real change through the usage of our data
           </Typography>
         </Box>
       </Box>

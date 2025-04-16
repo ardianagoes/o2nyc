@@ -30,7 +30,8 @@
 	padding: 0.8rem 2.5rem;
 	border-radius: 50px;
 	border: 3px solid white;
-	box-shadow: 0 4px 10px black
+	box-shadow: 0 4px 10px black;
+	background-color: #43b2b0;
 }
 
 .contact-content{
@@ -95,7 +96,7 @@
 .volunteer-text {
 	text-shadow: 0.1px 0.1px 0.1px black;
 	background-color: white;
-	color: #43b2b0;
+	color: #3b9694;
 	padding: 2rem;
 	border-radius: 15px;
 	font-size: 1.4rem !important;
@@ -142,7 +143,7 @@
 	font-size: 1.5rem !important;
 	line-height: 1.6;
 	font-family: "Kanit", serif !important;
-	color: #43b2b0;
+	color: #3b9694;
 	text-align: left;
 	background-color: white;
 	padding: 2rem;

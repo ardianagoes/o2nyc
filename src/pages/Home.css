@@ -51,7 +51,7 @@
 	border-radius: 1rem;
 	max-width: 850px;
 	margin: 0 auto;
-	color: #43b2b0;
+	color: #3b9694;
 	font-family: "Kanit", serif !important;
 	font-weight: 500 !important;
 	font-size: 1.9rem !important;
@@ -115,7 +115,7 @@
 }
 
 .info-text-box .MuiTypography-root {
-	color: #43b2b0;
+	color: #3b9694;
 	font-size: 1.3rem;
 	text-shadow: 0.2px 0.2px 0.2px black;
 	font-family: "Kanit", serif !important;
@@ -176,6 +176,8 @@
 
 .action-heading{
 	font-size: 1.7rem !important;
+	font-family: "Kanit", serif !important;
+	font-weight: 500 !important;
 }
 
 .action-text-box .MuiTypography-root {
@@ -242,14 +244,14 @@
 	width: 100%;
 	max-width: 550px;
 	text-align: left;
-	color: #333;
+	color: #3b9694 !important;
 }
 
 .blurb-heading {
 	font-family: "Kanit", serif !important;
 	font-weight: 600 !important;
 	font-size: 1.8rem !important;
-	color: #43b2b0;
+	color: #3b9694;
 	margin-bottom: 1.2rem !important;
 	text-align: center;
 }
@@ -258,7 +260,7 @@
 	font-family: "Kanit", serif !important;
 	font-weight: 400 !important;
 	font-size: 1.2rem !important;
-	color: #333;
+	color: #3b9694;
 	margin-bottom: 0.6rem;
 	line-height: 1.5;
 	padding-left: 0.5rem;
