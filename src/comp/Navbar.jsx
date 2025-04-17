@@ -4,7 +4,6 @@ import "./Navbar.css";
 import MenuIcon from '@mui/icons-material/Menu';    
 import CloseIcon from '@mui/icons-material/Close';  
 
-const INSTAGRAM_URL = "https://www.instagram.com/o2nyc_/";
 const GOOGLE_FORM_URL = "https://forms.gle/12Fkbe73fsZ3w2Fg7";
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -51,12 +50,12 @@ const Navbar = () => {
         </Box>
         <Box className="navbar-right">
           <Link
-            href={INSTAGRAM_URL}
+            href="https://linktr.ee/o2nyc"
             className="insta-nav" 
             rel="noopener noreferrer"
             target="_blank"
           >
-            <img src={"/images/instagram.png"} alt="Instagram logo" className="navbar-social-icon"/>
+            <img src={"/images/linktree.png"} alt="linktree logo" className="navbar-social-icon"/>
           </Link>
           <Button
             variant="contained"
@@ -127,7 +126,7 @@ const Navbar = () => {
           borderBottom: '1px solid #eee'
           }}>Join Us</Link>
         <Box className="mobile-menu-extras">
-          <Link href={INSTAGRAM_URL} className="mobile-menu-item social" target="_blank" rel="noopener noreferrer" onClick={handleMobileMenuClose} sx={{
+          <Link href="https://linktr.ee/o2nyc" className="mobile-menu-item social" target="_blank" rel="noopener noreferrer" onClick={handleMobileMenuClose} sx={{
           display: 'block', 
           padding: '1rem 1.5rem',
           fontFamily: '"Kanit", serif', 
@@ -137,7 +136,7 @@ const Navbar = () => {
           textAlign: 'center',
           borderBottom: '1px solid #eee'
           }}>
-            <img src={"/images/instagram.png"} alt="Instagram" className="mobile-menu-icon"/> Instagram
+            <img src={"/images/linktree.png"} alt="Instagram" className="mobile-menu-icon"/> Linktree
           </Link>
           <Button
             variant="outlined" 

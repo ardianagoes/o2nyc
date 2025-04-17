@@ -105,8 +105,8 @@
 }
 
 .mobile-menu-icon {
-	height: 40px;
-	width: 40px;
+	height: 50px;
+	width: 50px;
 }
 
 .mobile-menu-extras {
@@ -171,7 +171,6 @@
 }
 
 .navbar-social-icon {
-	margin-top: 1rem;
 	height: 100px;
 	width: 100px;
 	display: block;
