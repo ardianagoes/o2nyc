@@ -11,7 +11,15 @@ import Clarity from '@microsoft/clarity';
 const App = () => {
   const projectId = "rtghfscrdv"
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
-  Clarity.init(projectId);
+
+  useEffect(() => {
+    if (projectId && Clarity && typeof Clarity.init === 'function') {
+      Clarity.init(projectId);
+      console.log("Microsoft Clarity initialized with project ID:", projectId);
+    } else {
+      console.error("Microsoft Clarity projectId is missing or Clarity.init is not a function.");
+    }
+  }, [projectId]);
 
   useEffect(() => {
     const handleResize = () => {
