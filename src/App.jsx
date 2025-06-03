@@ -4,11 +4,14 @@ import { Box } from "@mui/material";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
+import Clarity from '@microsoft/clarity';
 
 const App = () => {
+  const projectId = "rtghfscrdv"
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  Clarity.init(projectId);
 
   useEffect(() => {
     const handleResize = () => {
