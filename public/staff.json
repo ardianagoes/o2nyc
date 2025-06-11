@@ -1,0 +1,98 @@
+[
+  {
+    "id": "el01",
+    "name": "Daniel Fox",
+    "role": "Event Lead",
+    "imageUrl": "/images/team/daniel.png"
+  },
+  {
+    "id": "el02",
+    "name": "Aiden Li",
+    "role": "Event Lead",
+    "imageUrl": "/images/team/aiden.png"
+  },
+  {
+    "id": "el03",
+    "name": "Kona Sullivan",
+    "role": "Event Lead",
+    "imageUrl": "/images/team/kona.png"
+  },
+  {
+    "id": "el04",
+    "name": "Martin Jarnot",
+    "role": "Event Lead",
+    "imageUrl": "/images/team/martin.png"
+  },
+  {
+    "id": "el05",
+    "name": "Julian Weaver",
+    "role": "Event Lead",
+    "imageUrl": "/images/team/julian.png"
+  },
+  {
+    "id": "el06",
+    "name": "Alvin Chen",
+    "role": "Event Lead",
+    "imageUrl": "/images/team/alvin.png"
+  },
+  {
+    "id": "eo01",
+    "name": "Andy",
+    "role": "Outreach Lead",
+    "imageUrl": "/images/team/andy.png"
+  },
+  {
+    "id": "eo02",
+    "name": "Benjamin Gerzon",
+    "role": "Outreach Lead",
+    "imageUrl": "/images/team/benjamin.png"
+  },
+  {
+    "id": "eo03",
+    "name": "Ocean Pan",
+    "role": "Outreach Lead",
+    "imageUrl": "/images/team/ocean.png"
+  },
+  {
+    "id": "gwr01",
+    "name": "Henry",
+    "role": "Grant Lead",
+    "imageUrl": "/images/team/henry.png"
+  },
+  {
+    "id": "gwr02",
+    "name": "Bella Jiang",
+    "role": "Grant Lead",
+    "imageUrl": "/images/team/bella.png"
+  },
+  {
+    "id": "gwr03",
+    "name": "Amaiya Mclaren",
+    "role": "Grant Lead",
+    "imageUrl": "/images/team/amaiya.png"
+  },
+  {
+    "id": "smeo01",
+    "name": "Sophie Lapchuk",
+    "role": "Outreach Lead",
+    "imageUrl": "/images/team/sophie.png"
+  },
+  {
+    "id": "smm01",
+    "name": "Joanna Chen",
+    "role": "Outreach Lead",
+    "imageUrl": "/images/team/joanna.png"
+  },
+  {
+    "id": "bl01",
+    "name": "Christian",
+    "role": "Business Lead",
+    "imageUrl": "/images/team/christian.png"
+  },
+  {
+    "id": "rel01",
+    "name": "Jefferey Liu",
+    "role": "Recruitment Lead",
+    "imageUrl": "/images/team/jefferey.png"
+  }
+]

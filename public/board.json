@@ -1,0 +1,30 @@
+{
+    "Co-Directors": [
+      {
+        "id": "cd01",
+        "name": "Debanjan Paul",
+        "role": "Co-Director",
+        "imageUrl": "/images/team/debanjan.png"
+      },
+      {
+        "id": "cd02",
+        "name": "Seeger Berman Rossi Kempner",
+        "role": "Co-Director",
+        "imageUrl": "/images/team/seeger.png"
+      },
+      {
+        "id": "cd02",
+        "name": "Mariam Amin",
+        "role": "Co-Director",
+        "imageUrl": "/images/team/mariam.png"
+      }
+    ],
+    "Head of Technology": [
+      {
+        "id": "ht01",
+        "name": "Ardian Agoes",
+        "role": "Head of Technology",
+        "imageUrl": "/images/team/ardian.png"
+      }
+    ]
+  }

@@ -54,43 +54,42 @@
 	margin-bottom: 5rem;
 }
 
-.content-block {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-	width: 95%;
-	max-width: 1200px;
-	margin: 0.5rem auto 1rem auto;
-	padding: 3rem;
-	gap: 2rem;
-	border: 5px solid white;
-	border-radius: 10px;
+.content-block,
+.sensor-info-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 3rem;
+    gap: 3rem;
+
+    /* New "frosted glass" styles */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.left-column {
-	display: flex;
-	flex: 1;
-	padding: 0;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
-
+.left-column,
 .right-column {
-	display: flex;
-	flex: 1;
-	padding: 0;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    flex: 1;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-
 
 .volunteer-image {
-	margin-top: 1rem;
-	max-width: 70%;
-	height: auto;
-	border-radius: 12px;
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
 }
 
 .volunteer-text {
@@ -111,20 +110,6 @@
 .form-button-section {
 	text-align: center;
 	padding: 2rem 1rem 3rem 1rem;
-}
-
-.sensor-info-section {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-	width: 95%;
-	max-width: 1200px;
-	margin: 0.5rem auto 1rem auto;
-	padding: 3rem;
-	gap: 2rem;
-	border: 5px solid white;
-	border-radius: 10px;
 }
 
 .sensor-box {
@@ -171,6 +156,38 @@
 	text-align: center;
 	max-width: 80%;
 	text-shadow: 1px 1px 1px black !important;
+}
+.slideshow-container {
+    position: relative; /* This is crucial for positioning the arrows */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.volunteer-image {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.slide-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2; 
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    color: white !important;
+}
+
+.slide-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.slide-arrow.left {
+    left: 10px;
+}
+
+.slide-arrow.right {
+    right: 10px;
 }
 
 @keyframes fadeIn {
@@ -249,7 +266,7 @@
 
 	.image-caption {
 		max-width: 70%;
-		font-size: 0.8rem;
+		font-size: 1.2rem !important;
 	}
 
 	.contact-cta-section {

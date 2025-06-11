@@ -163,29 +163,32 @@
 @media screen and (max-width: 768px) {
 	
 	.about-intro-section {
-		margin: 0 auto;
-		padding: 2rem;
-		margin-top: 2rem;
-		max-width: 325px;
-		font-size: 1rem !important;
-	}
-
-	.role-title {
-		font-size: 3rem !important;
-		margin-bottom: 1.5rem;
-	}
-
-	.members-row {
-		gap: 2rem;
-	}
-
-	.member-card {
-		width: calc(100% - 2rem);
-		max-width: 300px;
-	}
-
-	.about-intro-text,
-	.about-intro-section .MuiTypography-body1 {
-		font-size: 1.1rem;
-	}
+        margin: 3rem 2rem auto;
+        padding: 2rem;
+        max-width: 90%;
+    }
+    .about-intro-text,
+    .about-intro-section .MuiTypography-body1 {
+        font-size: 1.1rem;
+    }
+    .role-title {
+        font-size: 2.2rem !important;
+        margin-bottom: 1.5rem;
+    }
+    .members-row {
+        gap: 1.5rem;
+    }
+    .member-card {
+        width: calc(100% - 2rem);
+        max-width: 280px; 
+        padding: 1rem;    
+    }
+    .member-image-container {
+        width: 120px;    
+        height: 120px;   
+        margin-bottom: 1rem;
+    }
+    .member-name {
+        font-size: 1.3rem !important;
+    }
 }

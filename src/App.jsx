@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Box } from "@mui/material";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Staff from "./pages/Staff";
 import Contact from "./pages/Contact";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
@@ -36,7 +37,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/board" element={<About />} />
+          <Route path="/staff" element={<Staff />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>

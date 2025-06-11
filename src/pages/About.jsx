@@ -13,7 +13,7 @@ export default function About() {
       try {
         setLoading(true);
         setError(null);
-        const response = await fetch('/members.json');
+        const response = await fetch('/board.json');
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }

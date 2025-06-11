@@ -1,13 +1,15 @@
 import { Box, Button, Link, IconButton } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import MenuIcon from '@mui/icons-material/Menu';    
-import CloseIcon from '@mui/icons-material/Close';  
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 const GOOGLE_FORM_URL = "https://forms.gle/12Fkbe73fsZ3w2Fg7";
 const Navbar = () => {
+  const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
+  const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,13 +21,13 @@ const Navbar = () => {
         }
     };
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("scroll", closeMenuOnScroll); 
+    window.addEventListener("scroll", closeMenuOnScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("scroll", closeMenuOnScroll);
     };
-  }, [isMobileMenuOpen]); 
+  }, [isMobileMenuOpen]);
 
   const handleMobileMenuToggle = () => {
     setIsMobileMenuOpen(prevState => !prevState);
@@ -33,6 +35,7 @@ const Navbar = () => {
 
   const handleMobileMenuClose = () => {
     setIsMobileMenuOpen(false);
+    setIsMobileAboutOpen(false);
   };
 
   return (
@@ -45,13 +48,36 @@ const Navbar = () => {
             </Link>
           </Box>
           <Link href="/home" className="selection-item">Home</Link>
-          <Link href="/about" className="selection-item">About Us</Link>
+          <Box
+            className="selection-item-wrapper"
+            onMouseEnter={() => setIsAboutDropdownOpen(true)}
+            onMouseLeave={() => setIsAboutDropdownOpen(false)}
+          >
+            <Box
+              className="selection-item"
+              sx={{
+                cursor: 'default',
+                '&:hover': {
+                  transform: 'none',
+                  textShadow: 'none',
+                }
+              }}
+            >
+              About Us
+            </Box>
+            {isAboutDropdownOpen && (
+              <Box className="dropdown-menu">
+                <Link href="/board" className="dropdown-item">Board</Link>
+                <Link href="/staff" className="dropdown-item">Staff</Link>
+              </Box>
+            )}
+          </Box>
           <Link href="/contact" className="selection-item">Join Us</Link>
         </Box>
         <Box className="navbar-right">
           <Link
             href="https://linktr.ee/o2nyc"
-            className="insta-nav" 
+            className="insta-nav"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -62,21 +88,21 @@ const Navbar = () => {
             href={GOOGLE_FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="navbar-contact-button" 
+            className="navbar-contact-button"
             size="small"
-            sx={{ 
+            sx={{
               backgroundColor: '#2A7C7A',
-              color: 'white', 
+              color: 'white',
               fontWeight: 'bold',
-              fontSize: '1.5em', 
+              fontSize: '1.5em',
               padding: '1rem 18px',
               borderRadius: '25px',
               textTransform: 'none',
-              boxShadow: '0 2px 5px black', 
+              boxShadow: '0 2px 5px black',
               transition: 'background-color 0.2s ease, transform 0.2s ease',
               '&:hover': {
-              backgroundColor: '#f5f5f5', 
-              color: '#256d6a', 
+              backgroundColor: '#f5f5f5',
+              color: '#256d6a',
               transform: 'translateY(-1px)',
               boxShadow: '0px 3px 7px black'
               }
@@ -89,57 +115,39 @@ const Navbar = () => {
           className="hamburger-icon"
           aria-label="toggle menu"
           onClick={handleMobileMenuToggle}
-          sx={{ color: '#215d4e', display: { xs: 'flex', md: 'none' } }} 
+          sx={{ color: '#215d4e', display: { xs: 'flex', md: 'none' } }}
         >
           {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
         </IconButton>
-      </Box> 
+      </Box>
       <Box className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
-        <Link href="/home" className="mobile-menu-item" onClick={handleMobileMenuClose}  sx={{
-          display: 'block', 
-          padding: '1rem 1.5rem',
-          fontFamily: '"Kanit", serif', 
-          fontSize: '1.2rem',
-          color: '#215d4e',      
-          textDecoration: 'none', 
-          textAlign: 'center',
-          borderBottom: '1px solid #eee'
-          }}>Home</Link>
-        <Link href="/about" className="mobile-menu-item" onClick={handleMobileMenuClose}sx={{
-          display: 'block', 
-          padding: '1rem 1.5rem',
-          fontFamily: '"Kanit", serif', 
-          fontSize: '1.2rem',
-          color: '#215d4e',      
-          textDecoration: 'none', 
-          textAlign: 'center',
-          borderBottom: '1px solid #eee'
-          }} >About Us</Link>
-        <Link href="/contact" className="mobile-menu-item" onClick={handleMobileMenuClose} sx={{
-          display: 'block', 
-          padding: '1rem 1.5rem',
-          fontFamily: '"Kanit", serif', 
-          fontSize: '1.2rem',
-          color: '#215d4e',      
-          textDecoration: 'none', 
-          textAlign: 'center',
-          borderBottom: '1px solid #eee'
-          }}>Join Us</Link>
+        <Link href="/home" className="mobile-menu-item" onClick={handleMobileMenuClose}>Home</Link>
+       <Box className="mobile-menu-group">
+            <Box
+                className="mobile-menu-item"
+                onClick={() => setIsMobileAboutOpen(!isMobileAboutOpen)}
+                sx={{ cursor: 'pointer', width: '100%' }}
+            >
+                About Us
+            </Box>
+            {isMobileAboutOpen && (
+                <Box className="mobile-submenu">
+                    <Link href="/board" className="mobile-menu-item" onClick={handleMobileMenuClose}>
+                        Board
+                    </Link>
+                    <Link href="/staff" className="mobile-menu-item" onClick={handleMobileMenuClose}>
+                        Staff
+                    </Link>
+                </Box>
+            )}
+        </Box>
+        <Link href="/contact" className="mobile-menu-item" onClick={handleMobileMenuClose}>Join Us</Link>
         <Box className="mobile-menu-extras">
-          <Link href="https://linktr.ee/o2nyc" className="mobile-menu-item social" target="_blank" rel="noopener noreferrer" onClick={handleMobileMenuClose} sx={{
-          display: 'block', 
-          padding: '1rem 1.5rem',
-          fontFamily: '"Kanit", serif', 
-          fontSize: '1.2rem',
-          color: '#215d4e',      
-          textDecoration: 'none', 
-          textAlign: 'center',
-          borderBottom: '1px solid #eee'
-          }}>
+          <Link href="https://linktr.ee/o2nyc" className="mobile-menu-item social" target="_blank" rel="noopener noreferrer" onClick={handleMobileMenuClose}>
             <img src={"/images/linktree.png"} alt="Instagram" className="mobile-menu-icon"/> Linktree
           </Link>
           <Button
-            variant="outlined" 
+            variant="outlined"
             href={GOOGLE_FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -151,7 +159,7 @@ const Navbar = () => {
           </Button>
         </Box>
       </Box>
-      </Box>    
+      </Box>
   );
 };
 
