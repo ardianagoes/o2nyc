@@ -51,7 +51,7 @@ export default function Contact() {
           Get Involved!
         </Typography>
       </Box>
-<Box className="sensor-box">
+        <Box className="sensor-box">
           <Box className="sensor-info-section">
             <Box className="left-column sensor-text-column">
               <Typography variant="body1" className="sensor-cost-text">

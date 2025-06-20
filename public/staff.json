@@ -37,7 +37,7 @@
   },
   {
     "id": "eo01",
-    "name": "Andy",
+    "name": "Andy Dragan",
     "role": "Outreach Lead",
     "imageUrl": "/images/team/andy.png"
   },
@@ -55,7 +55,7 @@
   },
   {
     "id": "gwr01",
-    "name": "Henry",
+    "name": "Henry Dixon",
     "role": "Grant Lead",
     "imageUrl": "/images/team/henry.png"
   },
@@ -91,8 +91,8 @@
   },
   {
     "id": "rel01",
-    "name": "Jefferey Liu",
+    "name": "Jeffery Liu",
     "role": "Recruitment Lead",
-    "imageUrl": "/images/team/jefferey.png"
+    "imageUrl": "/images/team/jeffery.png"
   }
 ]
