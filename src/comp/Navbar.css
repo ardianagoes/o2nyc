@@ -9,7 +9,7 @@
     width: 100%;
     top: 0;
     position: fixed;
-    transition: opacity 0.4s ease-out, transform 0.4s ease-out, background-color 0.3s ease-out;
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out, background-color 0.2s ease-out;
     background-color: white;
 }
 
@@ -17,6 +17,10 @@
     opacity: 0;
     transform: translateY(-100%);
     pointer-events: none;
+}
+
+.selection-item.navbar-dropdown-trigger::after {
+  display: none;
 }
 
 .navbar:hover .navbar-scrolled,
@@ -176,7 +180,7 @@
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+    transition: max-height 0.2s ease-out, opacity 0.2s ease-out;
     z-index: 999;
 }
 

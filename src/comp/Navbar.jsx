@@ -10,24 +10,34 @@ const Navbar = () => {
   const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolling(window.scrollY > 90);
+      if (isMobileMenuOpen) {
+          setIsMobileMenuOpen(false);
+      }
+
+      const currentScrollY = window.scrollY;
+      const threshold = 50; 
+
+      if (currentScrollY < threshold) {
+        setScrolling(false);
+      }
+      else if (currentScrollY > lastScrollY) {
+        setScrolling(true); 
+      } else {
+        setScrolling(false);
+      }
+      setLastScrollY(currentScrollY);
     };
-    const closeMenuOnScroll = () => {
-        if (isMobileMenuOpen) {
-            setIsMobileMenuOpen(false);
-        }
-    };
+
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("scroll", closeMenuOnScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("scroll", closeMenuOnScroll);
     };
-  }, [isMobileMenuOpen]);
+  }, [lastScrollY, isMobileMenuOpen]);
 
   const handleMobileMenuToggle = () => {
     setIsMobileMenuOpen(prevState => !prevState);
@@ -54,7 +64,7 @@ const Navbar = () => {
             onMouseLeave={() => setIsAboutDropdownOpen(false)}
           >
             <Box
-              className="selection-item"
+            className="selection-item navbar-dropdown-trigger"
               sx={{
                 cursor: 'default',
                 '&:hover': {

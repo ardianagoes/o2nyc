@@ -36,6 +36,18 @@
     "imageUrl": "/images/team/alvin.png"
   },
   {
+    "id": "el07",
+    "name": "Andrew Chu",
+    "role": "Event Lead",
+    "imageUrl": "/images/team/andrew.png"
+  },
+    {
+    "id": "el08",
+    "name": "Ronith Sunan",
+    "role": "Event Lead",
+    "imageUrl": "/images/team/ronith.png"
+  },
+  {
     "id": "eo01",
     "name": "Andy Dragan",
     "role": "Outreach Lead",
@@ -73,15 +85,39 @@
   },
   {
     "id": "gwr02",
+    "name": "Brendan Yee",
+    "role": "Grant Lead",
+    "imageUrl": "/images/team/brendan.png"
+  },
+  {
+    "id": "gwr03",
     "name": "Bella Jiang",
     "role": "Grant Lead",
     "imageUrl": "/images/team/bella.png"
   },
   {
-    "id": "gwr03",
+    "id": "gwr04",
     "name": "Amaiya Mclaren",
     "role": "Grant Lead",
     "imageUrl": "/images/team/amaiya.png"
+  },
+  {
+    "id": "smeo01",
+    "name": "Sophie Lapchuk",
+    "role": "Outreach Lead",
+    "imageUrl": "/images/team/sophie.png"
+  },
+  {
+    "id": "smm01",
+    "name": "Joanna Chen",
+    "role": "Outreach Lead",
+    "imageUrl": "/images/team/joanna.png"
+  },
+  {
+    "id": "smm02",
+    "name": "Misty Lin",
+    "role": "Outreach Lead",
+    "imageUrl": "/images/team/misty.png"
   },
   {
     "id": "bl01",
