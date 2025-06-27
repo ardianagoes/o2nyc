@@ -77,6 +77,24 @@
     "role": "Outreach Lead",
     "imageUrl": "/images/team/joanna.png"
   },
+    {
+    "id": "smeo01",
+    "name": "Sophie Lapchuk",
+    "role": "Outreach Lead",
+    "imageUrl": "/images/team/sophie.png"
+  },
+  {
+    "id": "smm01",
+    "name": "Joanna Chen",
+    "role": "Outreach Lead",
+    "imageUrl": "/images/team/joanna.png"
+  },
+  {
+    "id": "smm02",
+    "name": "Misty Lin",
+    "role": "Outreach Lead",
+    "imageUrl": "/images/team/misty.png"
+  },
   {
     "id": "gwr01",
     "name": "Henry Dixon",
@@ -100,24 +118,6 @@
     "name": "Amaiya Mclaren",
     "role": "Grant Lead",
     "imageUrl": "/images/team/amaiya.png"
-  },
-  {
-    "id": "smeo01",
-    "name": "Sophie Lapchuk",
-    "role": "Outreach Lead",
-    "imageUrl": "/images/team/sophie.png"
-  },
-  {
-    "id": "smm01",
-    "name": "Joanna Chen",
-    "role": "Outreach Lead",
-    "imageUrl": "/images/team/joanna.png"
-  },
-  {
-    "id": "smm02",
-    "name": "Misty Lin",
-    "role": "Outreach Lead",
-    "imageUrl": "/images/team/misty.png"
   },
   {
     "id": "bl01",
