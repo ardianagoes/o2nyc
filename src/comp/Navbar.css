@@ -158,10 +158,39 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.navbar-social-icon:hover {
-    transform: scale(1.1);
+.linktree-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none !important;
 }
 
+.linktree-text {
+    text-decoration: none !important;
+    max-width: 0;
+    opacity: 0;
+    visibility: hidden;
+    color: #215d4e;
+    font-family: "Kanit", serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    white-space: nowrap; 
+    margin-left: 8px;  
+    transition: max-width 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.navbar-social-icon {
+    transition: transform 0.4s ease-in-out;
+}
+
+.linktree-link:hover .navbar-social-icon {
+    transform: translateX(-1px);
+}
+
+.linktree-link:hover .linktree-text {
+    max-width: 150px; 
+    opacity: 1;
+    visibility: visible;
+}
 
 .hamburger-icon {
     display: none;

@@ -87,11 +87,12 @@ const Navbar = () => {
         <Box className="navbar-right">
           <Link
             href="https://linktr.ee/o2nyc"
-            className="insta-nav"
+            className="linktree-link"
             rel="noopener noreferrer"
             target="_blank"
           >
             <img src={"/images/linktree.png"} alt="linktree logo" className="navbar-social-icon"/>
+            <span className="linktree-text">LinkTree</span>
           </Link>
           <Button
             variant="contained"
