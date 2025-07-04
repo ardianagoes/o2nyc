@@ -5,7 +5,7 @@
 	flex-direction: column;
 	background-position: center;
 	background-size: cover;
-	background-color: #43b2b0;
+	background-color: #2a7c7a;
 	color: black;
 	min-height: 100vh;
 	width: 100vw;
@@ -36,7 +36,7 @@
 .motto-section {
 	background-image: url("./pattern1.svg") !important;
 	background-size: cover;
-	background-color: #43b2b0;
+	background-color: #2a7c7a;
 	background-repeat: no-repeat; 
 	padding: 5rem 1.5rem;
 	margin: 0;
@@ -67,7 +67,7 @@
 	padding-right: 3rem;
 	background-image: url("./pattern2.svg") !important;
 	background-size: cover;
-	background-color: #43b2b0;
+	background-color: #2a7c7a;
 	background-repeat: no-repeat; 	
 	display: flex;
 	align-items: center;
@@ -82,7 +82,7 @@
 	background-color: white;
 	padding: 2.5rem;
 	border-radius: 8px;
-	color: #43b2b0;
+	color: #2a7c7a;
 	opacity: 0;
 	transform: translateX(-30rem);
 	transition: opacity 1.5s ease-out, transform 1.5s ease-out;
@@ -145,7 +145,7 @@
 	padding-right: 3rem;
 	background-image: url("./pattern3.svg") !important;
 	background-size: cover;
-	background-color: #43b2b0;
+	background-color: #2a7c7a;
 	background-repeat: no-repeat;
 	display: flex;
 	align-items: stretch;
@@ -155,7 +155,7 @@
 
 .action-text-box {
 	flex: 1;
-	background-color: #43b2b0;
+	background-color: #2a7c7a;
 	padding: 2.5rem;
 	border-radius: 8px;
 	color: white;
@@ -196,13 +196,13 @@
 .final-cta-section {
 	background-image: url("./pattern4.svg") !important;
 	background-size: cover;
-	background-color: #43b2b0;
+	background-color: #2a7c7a;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	gap: 3rem;
 	padding: 4rem 3rem;
-	background-color: #43b2b0;
+	background-color: #2a7c7a;
 }
 
 .get-involved-bubble-container {
@@ -216,7 +216,7 @@
 
 .get-involved-title-bubble {
 	width: fit-content;
-	background-color: #43b2b0;
+	background-color: #2a7c7a;
 	padding: 1.5rem 3.5rem;
 	border-radius: 60px;
 	border: 4px solid white;
@@ -237,7 +237,7 @@
 
 .get-involved-blurb-bubble {
 	background-color: white;
-	border: 3px solid #43b2b0;
+	border: 3px solid #2a7c7a;
 	border-radius: 15px;
 	padding: 3rem 3rem;
 	box-shadow: 0 4px 12px black;
@@ -339,7 +339,7 @@
 		align-items: center;
 		gap: 2rem;
 		padding: 3rem 2rem;
-		background-color: #43b2b0;
+		background-color: #2a7c7a;
 	}
 
 	.info-text-box {
@@ -348,7 +348,7 @@
 		background-color: white;
 		padding: 2.5rem;
 		border-radius: 8px;
-		color: #43b2b0;
+		color: #2a7c7a;
 		opacity: 0;
 		transform: translateX(-15rem);
 		transition: opacity 1.5s ease-out, transform 1.5s ease-out;
@@ -376,7 +376,7 @@
 
 	.action-text-box {
 		flex: 1;
-		background-color: #43b2b0;
+		background-color: #2a7c7a;
 		padding: 2.5rem;
 		border-radius: 8px;
 		color: white;

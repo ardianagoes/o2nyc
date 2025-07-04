@@ -8,7 +8,7 @@
 	margin: 0;
 	text-align: center;
 	color: #215d4e;
-	-webkit-text-stroke: 0.5px #43b2b0;
+	-webkit-text-stroke: 0.5px #2a7c7a;
 	border-top: 3px solid white;
 	overflow: hidden;
 }
@@ -72,7 +72,7 @@
 
 .contact-box .MuiTypography-body1 {
 	color: #215d4e;
-	-webkit-text-stroke: 0.5px #43b2b0;
+	-webkit-text-stroke: 0.5px #2a7c7a;
 	font-weight: 500;
 	font-size: 1.2rem;
 }

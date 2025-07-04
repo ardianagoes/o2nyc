@@ -1,8 +1,8 @@
-import { Box, Button, Link, IconButton } from "@mui/material";
-import React, { useEffect, useState } from "react";
-import "./Navbar.css";
-import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Box, Button, IconButton, Link } from "@mui/material";
+import { useEffect, useState } from "react";
+import "./Navbar.css";
 
 const GOOGLE_FORM_URL = "https://forms.gle/12Fkbe73fsZ3w2Fg7";
 const Navbar = () => {
@@ -91,7 +91,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <img src={"/images/linktree.png"} alt="linktree logo" className="navbar-social-icon"/>
+            <img src={"/images/darklinktree.png"} alt="linktree logo" className="navbar-social-icon"/>
             <span className="linktree-text">LinkTree</span>
           </Link>
           <Button
