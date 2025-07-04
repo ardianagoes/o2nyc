@@ -1,5 +1,5 @@
 import "./Contact.css";
-import { Box, Typography, Button, IconButton } from "@mui/material";
+import { Box, Typography, Button, IconButton, Link} from "@mui/material";
 import Navbar from "../comp/Navbar";
 import Footer from "../comp/Footer";
 import React, { useState } from "react"; 
@@ -47,8 +47,24 @@ export default function Contact() {
       </Box>
       <Box className="contact-content">
         <Box className="get-involved-title-container">
-        <Typography variant="h3" component="h1" className="page-title get-involved-title">
-          Get Involved!
+        <Typography 
+            variant="h3" 
+            component={Link}
+            href="https://forms.gle/12Fkbe73fsZ3w2Fg7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="page-title get-involved-title"
+            sx={{
+            textDecoration: 'none',
+            color: 'inherit',
+            transition: 'opacity 0.2s ease-in-out',
+            '&:hover': {
+                opacity: 0.9,
+                cursor: 'pointer',
+            }
+            }}
+        >
+            Get Involved!
         </Typography>
       </Box>
         <Box className="sensor-box">
