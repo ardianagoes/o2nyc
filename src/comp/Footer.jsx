@@ -59,7 +59,7 @@ const Footer = () => {
       <Typography className="copyright" variant="body1" align="center">
         ©{new Date().getFullYear()} O2NYC 
       </Typography>
-      <br />
+      <br/>
     </Box>
   );
 };

@@ -42,7 +42,6 @@ export default function Staff() {
             Meet Our Staff
           </Typography>
         </Box>
-
         <Box className="team-display-area loaded">
           <Box className="staff-members-row">
             {staffData.map((member) => (

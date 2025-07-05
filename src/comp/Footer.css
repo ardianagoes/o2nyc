@@ -90,7 +90,7 @@
 }
 
 @media screen and (max-width: 768px) {
-	
+
 	.contact-box {
 		margin-right: 1rem;
 	}
@@ -106,6 +106,6 @@
 	.contact-box .MuiTypography-body1 {
 		margin-right: 1rem;
 		font-size: 1.1rem !important;
-		font-weight: 500;
+		font-weight: 600;
 	}
 }

@@ -110,17 +110,21 @@
     .staff-title-box {
         margin-top: 8rem;
     }
+
     .member-card {
         width: calc(100% - 2rem);
         max-width: 300px; 
         padding: 0.8rem;   
     }
+
     .member-image-container {
         height: 320px
     }
+
     .member-name {
         font-size: 1.3rem !important;
     }
+    
     .member-role {
         font-size: 0.85rem !important; 
     }
