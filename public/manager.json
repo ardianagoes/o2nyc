@@ -1,0 +1,32 @@
+[
+  {
+    "id": "mm01",
+    "name": "Joanna Chen",
+    "role": "Media Manager",
+    "imageUrl": "/images/team/joanna.png"
+  },
+  {
+    "id": "em01",
+    "name": "Kona Sullivan",
+    "role": "Event Manager",
+    "imageUrl": "/images/team/kona.png"
+  },
+  {
+    "id": "tm01",
+    "name": "Belal Hasan",
+    "role": "Tech Manager",
+    "imageUrl": "/images/team/belal.png"
+  },
+  {
+    "id": "om01",
+    "name": "Andy Dragon",
+    "role": "Outreach Manager",
+    "imageUrl": "/images/team/andy.png"
+  },
+  {
+    "id": "rm01",
+    "name": "Jeffery Liu",
+    "role": "Recruitment Manager",
+    "imageUrl": "/images/team/jeffery.png"
+  }
+]

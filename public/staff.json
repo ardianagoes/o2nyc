@@ -1,117 +1,123 @@
 [
   {
-    "id": "el01",
+    "id": "ec01",
     "name": "Daniel Fox",
-    "role": "Event Lead",
+    "role": "Event Coordinator",
     "imageUrl": "/images/team/daniel.png"
   },
   {
-    "id": "el02",
+    "id": "ec02",
     "name": "Aiden Li",
-    "role": "Event Lead",
+    "role": "Event Coordinator",
     "imageUrl": "/images/team/aiden.png"
   },
   {
-    "id": "el03",
-    "name": "Kona Sullivan",
-    "role": "Event Lead",
-    "imageUrl": "/images/team/kona.png"
-  },
-  {
-    "id": "el04",
+    "id": "ec03",
     "name": "Martin Jarnot",
-    "role": "Event Lead",
+    "role": "Event Coordinator",
     "imageUrl": "/images/team/martin.png"
   },
   {
-    "id": "el05",
+    "id": "ec04",
     "name": "Quinn Lane",
-    "role": "Event Lead",
+    "role": "Event Coordinator",
     "imageUrl": "/images/team/quinn.png"
   },
   {
-    "id": "el06",
+    "id": "ec05",
     "name": "Julian Weaver",
-    "role": "Event Lead",
+    "role": "Event Coordinator",
     "imageUrl": "/images/team/julian.png"
   },
   {
-    "id": "el07",
+    "id": "ec06",
     "name": "Alvin Chen",
-    "role": "Event Lead",
+    "role": "Event Coordinator",
     "imageUrl": "/images/team/alvin.png"
   },
   {
-    "id": "el08",
-    "name": "Andrew Chu",
-    "role": "Event Lead",
-    "imageUrl": "/images/team/andrew.png"
-  },
-    {
-    "id": "el09",
+    "id": "ec07",
     "name": "Ronith Sunan",
-    "role": "Event Lead",
+    "role": "Event Coordinator",
     "imageUrl": "/images/team/ronith.png"
   },
   {
-    "id": "ol01",
-    "name": "Andy Dragan",
-    "role": "Outreach Lead",
-    "imageUrl": "/images/team/andy.png"
+    "id": "ec08",
+    "name": "Yanghao Rong",
+    "role": "Event Coordinator",
+    "imageUrl": "/images/team/yanghao.png"
   },
   {
-    "id": "ol02",
+    "id": "ec09",
+    "name": "Georgios Georgiadis",
+    "role": "Event Coordinator",
+    "imageUrl": "/images/team/georgios.png"
+  },
+  {
+    "id": "oc01",
     "name": "Benjamin Gerzon",
-    "role": "Outreach Lead",
+    "role": "Outreach Coordinator",
     "imageUrl": "/images/team/benjamin.png"
   },
   {
-    "id": "ol03",
+    "id": "oc02",
     "name": "Ocean Pan",
-    "role": "Outreach Lead",
+    "role": "Outreach Coordinator",
     "imageUrl": "/images/team/ocean.png"
   },
   {
-    "id": "ol04",
+    "id": "gd01",
     "name": "Sophie Lapchuk",
-    "role": "Outreach Lead",
+    "role": "Graphic Designer",
     "imageUrl": "/images/team/sophie.png"
   },
   {
-    "id": "ol05",
-    "name": "Joanna Chen",
-    "role": "Outreach Lead",
-    "imageUrl": "/images/team/joanna.png"
-  },
-  {
-    "id": "ol06",
+    "id": "gd02",
     "name": "Misty Lin",
-    "role": "Outreach Lead",
+    "role": "Graphic Designer",
     "imageUrl": "/images/team/misty.png"
   },
+    {
+    "id": "gd03",
+    "name": "Junbin Chen",
+    "role": "Graphic Designer",
+    "imageUrl": "/images/team/junbin.png"
+  },
   {
-    "id": "gl01",
+    "id": "gw01",
     "name": "Henry Dixon",
-    "role": "Grant Lead",
+    "role": "Grant Writer",
     "imageUrl": "/images/team/henry.png"
   },
   {
-    "id": "gl02",
+    "id": "gw02",
     "name": "Brendan Yee",
-    "role": "Grant Lead",
+    "role": "Grant Writer",
     "imageUrl": "/images/team/brendan.png"
   },
   {
-    "id": "gl03",
+    "id": "gw03",
     "name": "Bella Jiang",
-    "role": "Grant Lead",
+    "role": "Grant Writer",
     "imageUrl": "/images/team/bella.png"
   },
   {
-    "id": "gl04",
+    "id": "gw04",
     "name": "Amaiya Mclaren",
-    "role": "Grant Lead",
+    "role": "Grant Writer",
     "imageUrl": "/images/team/amaiya.png"
+  },
+  {
+    "id": "gw05",
+    "name": "Andrew Chu",
+    "role": "Grant Writer",
+    "imageUrl": "/images/team/andrew.png"
+  },
+  {
+    "id": "gw06",
+    "name": "Zamara Kush-Cantave",
+    "role": "Grant Writer",
+    "imageUrl": "/images/team/zamara.png"
   },
   {
     "id": "bl01",
@@ -120,27 +126,21 @@
     "imageUrl": "/images/team/christian.png"
   },
   {
-    "id": "rel01",
-    "name": "Jeffery Liu",
-    "role": "Recruitment Lead",
-    "imageUrl": "/images/team/jeffery.png"
-  },
-  {
-    "id": "tem01",
-    "name": "Belal Hasan",
-    "role": "Tech Manager",
-    "imageUrl": "/images/team/belal.png"
-  },
-  {
-    "id": "tel01",
+    "id": "se01",
     "name": "Jiewen Huang",
-    "role": "Tech Lead",
+    "role": "Software Engineer",
     "imageUrl": "/images/team/jiewen.png"
   },
   {
-    "id": "tel01",
+    "id": "se02",
+    "name": "Stephen Chen",
+    "role": "Software Engineer",
+    "imageUrl": "/images/team/stephen.png"
+  },
+  {
+    "id": "se03",
     "name": "Ryan Lin",
-    "role": "Tech Lead",
+    "role": "Software Engineer",
     "imageUrl": "/images/team/ryan.png"
   }
 ]
