@@ -84,6 +84,12 @@
     "imageUrl": "/images/team/junbin.png"
   },
   {
+    "id": "gd04",
+    "name": "Joanna Chen",
+    "role": "Graphic Designer",
+    "imageUrl": "/images/team/joanna.png"
+  },
+  {
     "id": "gw01",
     "name": "Henry Dixon",
     "role": "Grant Writer",

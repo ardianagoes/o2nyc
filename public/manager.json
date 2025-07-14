@@ -1,11 +1,5 @@
 [
   {
-    "id": "mm01",
-    "name": "Joanna Chen",
-    "role": "Media Manager",
-    "imageUrl": "/images/team/joanna.png"
-  },
-  {
     "id": "em01",
     "name": "Kona Sullivan",
     "role": "Event Manager",
