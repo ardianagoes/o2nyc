@@ -66,6 +66,12 @@
     "imageUrl": "/images/team/ocean.png"
   },
   {
+    "id": "oc03",
+    "name": "Sam Furman",
+    "role": "Outreach Coordinator",
+    "imageUrl": "/images/team/sam.png"
+  },
+  {
     "id": "gd01",
     "name": "Sophie Lapchuk",
     "role": "Graphic Designer",

@@ -1,10 +1,10 @@
-import "./Contact.css";
-import { Box, Typography, Button, IconButton, Link} from "@mui/material";
-import Navbar from "../comp/Navbar";
-import Footer from "../comp/Footer";
-import React, { useState } from "react"; 
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { Box, Button, IconButton, Link, Typography } from "@mui/material";
+import { useState } from "react";
+import Footer from "../comp/Footer";
+import Navbar from "../comp/Navbar";
+import "./Contact.css";
 
 const volunteerSlides = [
   {
@@ -26,7 +26,23 @@ const volunteerSlides = [
   { 
     imageSrc: '/images/prospect-volunteer5.png',
     caption: 'Prospect Park Fundraiser 6/8'
-  }
+  },
+  { 
+    imageSrc: '/images/volunteer1.jpg',
+    caption: 'Prospect Park Fundraiser 7/5'
+  },
+  { 
+    imageSrc: '/images/volunteer2.jpg',
+    caption: 'Prospect Park Fundraiser 7/12'
+  },
+  { 
+    imageSrc: '/images/volunteer3.jpg',
+    caption: 'Prospect Park Fundraiser 7/19'
+  },
+  { 
+    imageSrc: '/images/volunteer4.jpg',
+    caption: 'Prospect Park Fundraiser 8/2'
+  },
 ];
 
 export default function Contact() {
