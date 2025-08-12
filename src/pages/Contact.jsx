@@ -26,7 +26,23 @@ const volunteerSlides = [
   { 
     imageSrc: '/images/prospect-volunteer5.png',
     caption: 'Prospect Park Fundraiser 6/8'
-  }
+  },
+  { 
+    imageSrc: '/images/volunteer1.png',
+    caption: 'Prospect Park Fundraiser 7/5'
+  },
+  { 
+    imageSrc: '/images/volunteer2.jpg',
+    caption: 'Prospect Park Fundraiser 7/12'
+  },
+  { 
+    imageSrc: '/images/volunteer3.jpg',
+    caption: 'Prospect Park Fundraiser 7/19'
+  },
+  { 
+    imageSrc: '/images/volunteer4.jpg',
+    caption: 'Prospect Park Fundraiser 8/2'
+  },
 ];
 
 export default function Contact() {
