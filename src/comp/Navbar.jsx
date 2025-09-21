@@ -5,9 +5,12 @@ import { useEffect, useState } from "react";
 import "./Navbar.css";
 
 const GOOGLE_FORM_URL = "https://forms.gle/12Fkbe73fsZ3w2Fg7";
+
 const Navbar = () => {
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
+  const [isProjectsDropdownOpen, setIsProjectsDropdownOpen] = useState(false); // ADDED: State for new desktop dropdown
   const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false);
+  const [isMobileProjectsOpen, setIsMobileProjectsOpen] = useState(false); // ADDED: State for new mobile dropdown
   const [scrolling, setScrolling] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -46,6 +49,7 @@ const Navbar = () => {
   const handleMobileMenuClose = () => {
     setIsMobileMenuOpen(false);
     setIsMobileAboutOpen(false);
+    setIsMobileProjectsOpen(false); 
   };
 
   return (
@@ -82,6 +86,32 @@ const Navbar = () => {
               </Box>
             )}
           </Box>
+          <Box
+            className="selection-item-wrapper"
+            onMouseEnter={() => setIsProjectsDropdownOpen(true)}
+            onMouseLeave={() => setIsProjectsDropdownOpen(false)}
+          >
+            <Box
+              className="selection-item navbar-dropdown-trigger"
+              sx={{
+                cursor: 'default',
+                '&:hover': {
+                  transform: 'none',
+                  textShadow: 'none',
+                }
+              }}
+            >
+              Projects
+            </Box>
+            {isProjectsDropdownOpen && (
+              <Box className="dropdown-menu">
+                <Link href="/community-sensor-project" className="dropdown-item">
+                  Community Sensor Project
+                </Link>
+              </Box>
+            )}
+          </Box>
+
           <Link href="/contact" className="selection-item">Join Us</Link>
         </Box>
         <Box className="navbar-right">
@@ -133,21 +163,37 @@ const Navbar = () => {
       </Box>
       <Box className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <Link href="/home" className="mobile-menu-item" onClick={handleMobileMenuClose}>Home</Link>
-       <Box className="mobile-menu-group">
+        <Box className="mobile-menu-group">
+          <Box
+              className="mobile-menu-item"
+              onClick={() => setIsMobileAboutOpen(!isMobileAboutOpen)}
+              sx={{ cursor: 'pointer', width: '100%' }}
+          >
+              About Us
+          </Box>
+          {isMobileAboutOpen && (
+              <Box className="mobile-submenu">
+                  <Link href="/board" className="mobile-menu-item" onClick={handleMobileMenuClose}>
+                      Board
+                  </Link>
+                  <Link href="/staff" className="mobile-menu-item" onClick={handleMobileMenuClose}>
+                      Staff
+                  </Link>
+              </Box>
+          )}
+        </Box>
+        <Box className="mobile-menu-group">
             <Box
                 className="mobile-menu-item"
-                onClick={() => setIsMobileAboutOpen(!isMobileAboutOpen)}
+                onClick={() => setIsMobileProjectsOpen(!isMobileProjectsOpen)}
                 sx={{ cursor: 'pointer', width: '100%' }}
             >
-                About Us
+                Projects
             </Box>
-            {isMobileAboutOpen && (
+            {isMobileProjectsOpen && (
                 <Box className="mobile-submenu">
-                    <Link href="/board" className="mobile-menu-item" onClick={handleMobileMenuClose}>
-                        Board
-                    </Link>
-                    <Link href="/staff" className="mobile-menu-item" onClick={handleMobileMenuClose}>
-                        Staff
+                    <Link href="/community-sensor-project" className="mobile-menu-item" onClick={handleMobileMenuClose}>
+                        Community Sensor Project
                     </Link>
                 </Box>
             )}
@@ -170,7 +216,7 @@ const Navbar = () => {
           </Button>
         </Box>
       </Box>
-      </Box>
+    </Box>
   );
 };
 
