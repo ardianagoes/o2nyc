@@ -8,40 +8,56 @@ import "./Contact.css";
 
 const volunteerSlides = [
   {
-    imageSrc: '/images/prospect-volunteer.png',
+    imageSrc: '/images/volunteerevents/prospect-volunteer.png',
     caption: 'Prospect Park Fundraiser 4/13'
   },
   {
-    imageSrc: '/images/prospect-volunteer3.png',
+    imageSrc: '/images/volunteerevents/prospect-volunteer3.png',
     caption: 'Prospect Park Fundraiser 5/31'
   },
   { 
-    imageSrc: '/images/prospect-volunteer4.png',
+    imageSrc: '/images/volunteerevents/prospect-volunteer4.png',
     caption: 'Prospect Park Fundraiser 6/8'
   },
   { 
-    imageSrc: '/images/prospect-volunteer2.png',
+    imageSrc: '/images/volunteerevents/prospect-volunteer2.png',
     caption: 'Prospect Park Fundraiser 6/8'
   },
   { 
-    imageSrc: '/images/prospect-volunteer5.png',
+    imageSrc: '/images/volunteerevents/prospect-volunteer5.png',
     caption: 'Prospect Park Fundraiser 6/8'
   },
   { 
-    imageSrc: '/images/volunteer1.jpg',
+    imageSrc: '/images/volunteerevents/fundraise6-27.png',
+    caption: 'Prospect Park Fundraiser 6/27'
+  },
+  { 
+    imageSrc: '/images/volunteerevents/fundraise6-28.png',
+    caption: 'Prospect Park Fundraiser 6/28'
+  },
+  { 
+    imageSrc: '/images/volunteerevents/volunteer1.jpg',
     caption: 'Prospect Park Fundraiser 7/5'
   },
   { 
-    imageSrc: '/images/volunteer2.jpg',
+    imageSrc: '/images/volunteerevents/volunteer2.jpg',
     caption: 'Prospect Park Fundraiser 7/12'
   },
   { 
-    imageSrc: '/images/volunteer3.jpg',
+    imageSrc: '/images/volunteerevents/volunteer3.jpg',
     caption: 'Prospect Park Fundraiser 7/19'
   },
   { 
-    imageSrc: '/images/volunteer4.jpg',
+    imageSrc: '/images/volunteerevents/volunteer4.jpg',
     caption: 'Prospect Park Fundraiser 8/2'
+  },
+  { 
+    imageSrc: '/images/volunteerevents/fundraise8-23.png',
+    caption: 'Grand Army Plaza Fundraiser 8/23'
+  },
+  { 
+    imageSrc: '/images/volunteerevents/fundraise9-13.png',
+    caption: 'Fort Greene Park Fundraiser 9/13'
   },
 ];
 
