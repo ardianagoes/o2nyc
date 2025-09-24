@@ -47,20 +47,20 @@ const volunteerSlides = [
 
 const collaborationSlides = [
   {
-    imageSrc: '/images/volunteer1.jpg',
-    caption: 'Community Workshop'
+    imageSrc: '/images/collabs/bklvl.png',
+    caption: 'BKLVLUP'
   },
   {
-    imageSrc: '/images/volunteer2.jpg',
-    caption: 'Educational Event'
+    imageSrc: '/images/collabs/communityboard17.png',
+    caption: 'COMMUNITY BOARD 17'
   },
   { 
-    imageSrc: '/images/volunteer3.jpg',
-    caption: 'Sensor Installation'
+    imageSrc: '/images/collabs/haitireuse.png',
+    caption: 'LITTLE HAITI BK & BIG REUSE'
   },
   { 
-    imageSrc: '/images/volunteer4.jpg',
-    caption: 'Community Outreach'
+    imageSrc: '/images/collabs/singingwinds.png',
+    caption: 'SINGING WINDS'
   },
 ];
 
