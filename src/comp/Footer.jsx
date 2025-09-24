@@ -86,10 +86,6 @@ const Footer = () => {
           </Box>
         )}
       </Box>
-
-      <Typography className="copyright" variant="body1" align="center">
-        Email Us! o2nyc.contact@gmail.com
-      </Typography>
       <Typography className="copyright" variant="body1" align="center">
         ©{new Date().getFullYear()} O2NYC 
       </Typography>
