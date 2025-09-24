@@ -132,8 +132,8 @@
 
 .dropdown-item {
   text-decoration: none !important;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.3rem !important;
+  padding: 0.5rem 1rem;
+  font-size: 1rem !important;
   color: #215d4e !important;
   font-family: "Kanit", serif !important;
   font-weight: 400 !important;

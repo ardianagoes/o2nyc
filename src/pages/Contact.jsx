@@ -1,10 +1,93 @@
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Box, Button, IconButton, Link, Typography } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Footer from "../comp/Footer";
 import Navbar from "../comp/Navbar";
 import "./Contact.css";
+
+const CounterAnimation = ({ targetValue, duration = 2000 }) => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const counterRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !isVisible) {
+            setIsVisible(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+
+    return () => {
+      if (counterRef.current) {
+        observer.unobserve(counterRef.current);
+      }
+      observer.disconnect();
+    };
+  }, [isVisible]);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let startTime;
+    const animate = (currentTime) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const currentCount = Math.floor(targetValue * easeOutQuart);
+      
+      setCount(currentCount);
+      
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+    
+    requestAnimationFrame(animate);
+  }, [isVisible, targetValue, duration]);
+
+  return (
+    <Box ref={counterRef} className="stats-container">
+      <Box className="stats-row">
+        <Box className="stat-box">
+          <Typography variant="h4" className="stat-value">
+            35+
+          </Typography>
+          <Typography variant="body2" className="stat-label">
+            volunteers
+          </Typography>
+        </Box>
+        <Box className="stat-box">
+          <Typography variant="h4" className="stat-value">
+            18+
+          </Typography>
+          <Typography variant="body2" className="stat-label">
+            fundraisers held
+          </Typography>
+        </Box>
+      </Box>
+      <Box className="counter-container">
+        <Typography variant="h4" className="counter-label">
+          Total Raised:
+        </Typography>
+        <Typography variant="h2" className="counter-value">
+          ${count.toLocaleString()}
+        </Typography>
+      </Box>
+    </Box>
+  );
+};
 
 const volunteerSlides = [
   {
@@ -126,6 +209,10 @@ export default function Contact() {
         >
             Get Involved!
         </Typography>
+      </Box>
+      
+      <Box className="stats-section">
+        <CounterAnimation targetValue={8413} duration={2500} />
       </Box>
         
         <Box className="content-Box">

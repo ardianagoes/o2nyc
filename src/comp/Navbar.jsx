@@ -8,9 +8,9 @@ const GOOGLE_FORM_URL = "https://forms.gle/12Fkbe73fsZ3w2Fg7";
 
 const Navbar = () => {
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
-  const [isProjectsDropdownOpen, setIsProjectsDropdownOpen] = useState(false); // ADDED: State for new desktop dropdown
+  const [isProjectsDropdownOpen, setIsProjectsDropdownOpen] = useState(false); 
   const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false);
-  const [isMobileProjectsOpen, setIsMobileProjectsOpen] = useState(false); // ADDED: State for new mobile dropdown
+  const [isMobileProjectsOpen, setIsMobileProjectsOpen] = useState(false); 
   const [scrolling, setScrolling] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);

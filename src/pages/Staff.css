@@ -6,7 +6,7 @@
     width: 100vw;
     overflow-x: hidden;
     overflow-y: auto;
-    animation: fadeIn 1s ease-in-out;
+    animation: gentleSlideIn 0.8s ease-out;
 }
 
 .about-content {
@@ -48,9 +48,15 @@
     text-shadow: 2px 2px 5px black;
 }
 
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+@keyframes gentleSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .team-display-area {

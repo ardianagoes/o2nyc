@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Staff from "./pages/Staff";
 import Contact from "./pages/Contact";
-import CommunitySensorProject from "./pages/CommunitySensorProject"; // 1. Import the new component
+import CommunitySensorProject from "./pages/CommunitySensorProject"; 
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import Clarity from '@microsoft/clarity';

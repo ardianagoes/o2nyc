@@ -10,7 +10,7 @@
 	width: 100vw;
 	overflow-x: hidden;
 	overflow-y: auto;
-	animation: fadeIn 1s ease-in-out;
+	animation: gentleSlideIn 0.8s ease-out;
 }
 
 .title-box {
@@ -62,15 +62,14 @@
 	background-color: #2a7c7a;
 }
 
-@keyframes fadeIn {
+@keyframes gentleSlideIn {
 	0% {
 		opacity: 0;
-		background-color: #2a7c7a;
+		transform: translateY(20px);
 	}
-
 	100% {
 		opacity: 1;
-		background-color: #2a7c7a;
+		transform: translateY(0);
 	}
 }
 
