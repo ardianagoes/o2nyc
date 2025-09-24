@@ -59,6 +59,14 @@ const CounterAnimation = ({ targetValue, duration = 2000 }) => {
 
   return (
     <Box ref={counterRef} className="stats-container">
+      <Box className="counter-container">
+        <Typography variant="h4" className="counter-label">
+          Total Raised:
+        </Typography>
+        <Typography variant="h2" className="counter-value">
+          ${count.toLocaleString()}
+        </Typography>
+      </Box>
       <Box className="stats-row">
         <Box className="stat-box">
           <Typography variant="h4" className="stat-value">
@@ -76,14 +84,14 @@ const CounterAnimation = ({ targetValue, duration = 2000 }) => {
             fundraisers held
           </Typography>
         </Box>
-      </Box>
-      <Box className="counter-container">
-        <Typography variant="h4" className="counter-label">
-          Total Raised:
-        </Typography>
-        <Typography variant="h2" className="counter-value">
-          ${count.toLocaleString()}
-        </Typography>
+        <Box className="stat-box">
+          <Typography variant="h4" className="stat-value">
+            2
+          </Typography>
+          <Typography variant="body2" className="stat-label">
+            grants received
+          </Typography>
+        </Box>
       </Box>
     </Box>
   );
