@@ -45,8 +45,28 @@ const volunteerSlides = [
   },
 ];
 
+const collaborationSlides = [
+  {
+    imageSrc: '/images/volunteer1.jpg',
+    caption: 'Community Workshop'
+  },
+  {
+    imageSrc: '/images/volunteer2.jpg',
+    caption: 'Educational Event'
+  },
+  { 
+    imageSrc: '/images/volunteer3.jpg',
+    caption: 'Sensor Installation'
+  },
+  { 
+    imageSrc: '/images/volunteer4.jpg',
+    caption: 'Community Outreach'
+  },
+];
+
 export default function Contact() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentCollaborationSlide, setCurrentCollaborationSlide] = useState(0);
 
   const nextSlide = () => {
     setCurrentSlide(currentSlide === volunteerSlides.length - 1 ? 0 : currentSlide + 1);
@@ -54,6 +74,14 @@ export default function Contact() {
 
   const prevSlide = () => {
     setCurrentSlide(currentSlide === 0 ? volunteerSlides.length - 1 : currentSlide - 1);
+  };
+
+  const nextCollaborationSlide = () => {
+    setCurrentCollaborationSlide(currentCollaborationSlide === collaborationSlides.length - 1 ? 0 : currentCollaborationSlide + 1);
+  };
+
+  const prevCollaborationSlide = () => {
+    setCurrentCollaborationSlide(currentCollaborationSlide === 0 ? collaborationSlides.length - 1 : currentCollaborationSlide - 1);
   };
 
   return (
@@ -83,6 +111,35 @@ export default function Contact() {
             Get Involved!
         </Typography>
       </Box>
+        
+        <Box className="content-Box">
+          <Box className="content-block">
+            <Box className="left-column">
+              <Box className="slideshow-container">
+                <IconButton onClick={prevCollaborationSlide} className="slide-arrow left" aria-label="Previous slide">
+                  <ArrowBackIosNewIcon />
+                </IconButton>
+                <img
+                  src={collaborationSlides[currentCollaborationSlide].imageSrc}
+                  alt="Community collaboration"
+                  className="volunteer-image"
+                />
+                <IconButton onClick={nextCollaborationSlide} className="slide-arrow right" aria-label="Next slide">
+                  <ArrowForwardIosIcon />
+                </IconButton>
+              </Box>
+              <Typography variant="caption" display="block" className="image-caption">
+                {collaborationSlides[currentCollaborationSlide].caption}
+              </Typography>
+            </Box>
+            <Box className="right-column">
+              <Typography variant="body1" className="volunteer-text">
+                At O2NYC, we believe in the power of collaboration. We're always looking to partner with community organizations to host events, raise awareness, and distribute our affordable air quality sensors. If you're interested in working together to make a difference, please reach out to us.
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
+
         <Box className="sensor-box">
           <Box className="sensor-info-section">
             <Box className="left-column sensor-text-column">
