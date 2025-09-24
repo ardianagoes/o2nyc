@@ -4,6 +4,7 @@ import "./Footer.css";
 
 const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [showCopiedMessage, setShowCopiedMessage] = useState(false);
   const iconsRef = useRef(null);
 
   useEffect(() => {
@@ -34,6 +35,18 @@ const Footer = () => {
     };
   }, []); 
 
+  const copyEmailToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText('o2nyc.contact@gmail.com');
+      setShowCopiedMessage(true);
+      setTimeout(() => {
+        setShowCopiedMessage(false);
+      }, 500);
+    } catch (err) {
+      console.error('Failed to copy email: ', err);
+    }
+  };
+
   return (
     <Box className="contact-box">
       <Box className="footer-logo-container">
@@ -56,6 +69,24 @@ const Footer = () => {
           </Link>
         </Box>
       </Box>
+      
+      <Box className="email-section">
+        <Box className="email-container" onClick={copyEmailToClipboard}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="email-icon">
+            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#215d4e" strokeWidth="2" fill="none"/>
+            <polyline points="22,6 12,13 2,6" stroke="#215d4e" strokeWidth="2" fill="none"/>
+          </svg>
+          <Typography className="email-text" variant="body1">
+            Email Us!
+          </Typography>
+        </Box>
+        {showCopiedMessage && (
+          <Box className="copied-message">
+            <Typography variant="body2">Email Copied!</Typography>
+          </Box>
+        )}
+      </Box>
+
       <Typography className="copyright" variant="body1" align="center">
         Email Us! o2nyc.contact@gmail.com
       </Typography>

@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Staff from "./pages/Staff";
 import Contact from "./pages/Contact";
+import CommunitySensorProject from "./pages/CommunitySensorProject"; // 1. Import the new component
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import Clarity from '@microsoft/clarity';
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/board" element={<About />} />
           <Route path="/staff" element={<Staff />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/community-sensor-project" element={<CommunitySensorProject />} />
         </Routes>
       </BrowserRouter>
       <Analytics />
