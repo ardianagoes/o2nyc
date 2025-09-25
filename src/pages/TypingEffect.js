@@ -1,14 +1,14 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import React, { useEffect } from 'react';
 
-const TypingEffect = ({ text, className }) => {
+const TypingEffect = ({ text, className, onComplete }) => {
   const letters = Array.from(text);
 
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.03, delayChildren: 0.04 * i },
+      transition: { staggerChildren: 0.08, delayChildren: 0.1 * i },
     }),
   };
 
@@ -33,17 +33,32 @@ const TypingEffect = ({ text, className }) => {
     },
   };
 
+  useEffect(() => {
+    if (onComplete) {
+      const totalTime = 0.1 + (letters.length * 0.08) + 1.0; 
+      const timer = setTimeout(() => {
+        onComplete();
+      }, totalTime * 1000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [letters.length, onComplete]);
+
   return (
     <motion.div
-      style={{ display: "flex", overflow: "hidden" }}
+      style={{ display: "block", textAlign: "center", width: "100%" }}
       variants={container}
       initial="hidden"
       animate="visible"
       className={className}
     >
       {letters.map((letter, index) => (
-        <motion.span variants={child} key={index}>
-          {letter === " " ? "\u00A0" : letter}
+        <motion.span 
+          variants={child} 
+          key={index}
+          style={{ display: "inline" }}
+        >
+          {letter === " " ? " " : letter}
         </motion.span>
       ))}
     </motion.div>
