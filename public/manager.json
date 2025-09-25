@@ -1,9 +1,15 @@
 [
   {
     "id": "em01",
-    "name": "Kona Sullivan",
+    "name": "Alvin Chen",
     "role": "Event Manager",
-    "imageUrl": "/images/team/kona.png"
+    "imageUrl": "/images/team/alvin.png"
+  },
+  {
+    "id": "em02",
+    "name": "Ronith Sunan",
+    "role": "Event Manager",
+    "imageUrl": "/images/team/ronith.png"
   },
   {
     "id": "tm01",
@@ -13,14 +19,8 @@
   },
   {
     "id": "om01",
-    "name": "Andy Dragon",
+    "name": "Andy Dragan",
     "role": "Outreach Manager",
     "imageUrl": "/images/team/andy.png"
-  },
-  {
-    "id": "rm01",
-    "name": "Jeffery Liu",
-    "role": "Recruitment Manager",
-    "imageUrl": "/images/team/jeffery.png"
   }
 ]

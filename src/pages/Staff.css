@@ -18,7 +18,7 @@
 
 .staff-title-box {
     width: fit-content;
-    margin: 5rem auto 2rem auto;
+    margin: 3rem auto 2rem auto;
     display: block;
     padding: 1rem 3rem;
     border-radius: 50px;
@@ -27,10 +27,20 @@
     background-color: #2a7c7a;
 }
 
+.heads-title-box {
+    width: fit-content;
+    margin: 10rem auto 2rem auto;
+    display: block;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    border: 3px solid white;
+    box-shadow: 0 4px 12px black;
+    background-color: #2a7c7a;
+}
 
 .manager-title-box {
     width: fit-content;
-    margin: 11rem auto 2rem auto;
+    margin: 3rem auto 2rem auto;
     display: block;
     padding: 1rem 3rem;
     border-radius: 50px;
@@ -126,11 +136,19 @@
 
 @media screen and (max-width: 768px) {
     .staff-title-box {
+        margin-top: 6rem;
+    }
+
+    .heads-title-box {
         margin-top: 8rem;
     }
 
     .manager-title-box {
-        margin-top: 8rem;
+        margin-top: 3rem;
+    }
+
+    .staff-title {
+        font-size: 2.2rem !important;
     }
 
     .member-card {

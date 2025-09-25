@@ -30,18 +30,6 @@
     "imageUrl": "/images/team/julian.png"
   },
   {
-    "id": "ec06",
-    "name": "Alvin Chen",
-    "role": "Event Coordinator",
-    "imageUrl": "/images/team/alvin.png"
-  },
-  {
-    "id": "ec07",
-    "name": "Ronith Sunan",
-    "role": "Event Coordinator",
-    "imageUrl": "/images/team/ronith.png"
-  },
-  {
     "id": "ec08",
     "name": "Yanghao Rong",
     "role": "Event Coordinator",
@@ -52,6 +40,12 @@
     "name": "Georgios Georgiadis",
     "role": "Event Coordinator",
     "imageUrl": "/images/team/georgios.png"
+  },
+  {
+    "id": "ec06",
+    "name": "Harlan Kuckelman",
+    "role": "Event Coordinator",
+    "imageUrl": "/images/team/harlan.png"
   },
   {
     "id": "oc01",
@@ -70,6 +64,12 @@
     "name": "Sam Furman",
     "role": "Outreach Coordinator",
     "imageUrl": "/images/team/sam.png"
+  },
+  {
+    "id": "oc03",
+    "name": "Jay Li",
+    "role": "Outreach Coordinator",
+    "imageUrl": "/images/team/jay.png"
   },
   {
     "id": "gd01",
@@ -134,7 +134,7 @@
   {
     "id": "bl01",
     "name": "Christian Prieur",
-    "role": "Business Lead",
+    "role": "Business Coordinator",
     "imageUrl": "/images/team/christian.png"
   },
   {

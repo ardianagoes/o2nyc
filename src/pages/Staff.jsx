@@ -1,12 +1,13 @@
-import "./Staff.css";
 import { Box, CircularProgress, Typography } from "@mui/material";
-import Navbar from "../comp/Navbar";
+import React, { useEffect, useState } from "react";
 import Footer from "../comp/Footer";
-import React, { useState, useEffect } from "react";
+import Navbar from "../comp/Navbar";
+import "./Staff.css";
 
 export default function Staff() {
   const [staffData, setStaffData] = useState([]);
   const [managerData, setManagerData] = useState([]);
+  const [headsData, setHeadsData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -17,6 +18,13 @@ export default function Staff() {
 
         setLoading(true);
         setError(null);
+
+        const headsResponse = await fetch('/heads.json');
+        if (!headsResponse.ok) {
+          throw new Error(`HTTP error! Status: ${headsResponse.status} for heads`);
+        }
+        const heads = await headsResponse.json();
+        setHeadsData(heads);
 
         const managerResponse = await fetch('/manager.json');
         if (!managerResponse.ok) {
@@ -64,6 +72,35 @@ export default function Staff() {
     <Box className="staff-page">
       <Navbar />
       <Box className="about-content">
+        <Box className="heads-title-box">
+          <Typography variant="h3" component="h1" className="staff-title">
+            Meet Our Heads
+          </Typography>
+        </Box>
+        <Box className="team-display-area loaded">
+          <Box className="staff-members-row">
+            {headsData.map((member) => (
+              <Box key={member.id} className="member-card">
+                <Box className="member-image-container">
+                  <img
+                    src={member.imageUrl}
+                    alt={`${member.name} - ${member.role}`}
+                    className="member-image"
+                    onError={(e) => {
+                      e.target.src = "/images/team/placeholder.png";
+                    }}
+                  />
+                </Box>
+                <Typography variant="body1" component="p" className="member-role">
+                  {member.role}
+                </Typography>
+                <Typography variant="h6" component="h3" className="member-name">
+                  {member.name}
+                </Typography>
+              </Box>
+            ))}
+          </Box>
+        </Box>
         <Box className="manager-title-box">
           <Typography variant="h3" component="h1" className="staff-title">
             Meet Our Managers

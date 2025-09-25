@@ -1,0 +1,14 @@
+[
+  {
+    "id": "he01",
+    "name": "Kona Sullivan",
+    "role": "Head of Events",
+    "imageUrl": "/images/team/kona.png"
+  },
+  {
+    "id": "hr01",
+    "name": "Jeffery Liu",
+    "role": "Head of Recruitment",
+    "imageUrl": "/images/team/jeffery.png"
+  }
+]
