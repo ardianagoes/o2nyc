@@ -255,7 +255,7 @@ export default function Contact() {
           <Box className="sensor-info-section">
             <Box className="left-column sensor-text-column">
               <Typography variant="body1" className="sensor-cost-text">
-                Our sensors are cheap and inexpensive! Made of only 3 parts, housed in one box, that all cost just $50. Contact us if you wish to help fund or host one of our sensors!
+                Our sensors are cheap and inexpensive! Made of only 3 parts, housed in one box, that all cost just $20-30. Contact us if you wish to help fund or host one of our sensors!
               </Typography>
             </Box>
             <Box className="right-column sensor-image-column">

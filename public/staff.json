@@ -66,7 +66,7 @@
     "imageUrl": "/images/team/sam.png"
   },
   {
-    "id": "oc03",
+    "id": "oc04",
     "name": "Jay Li",
     "role": "Outreach Coordinator",
     "imageUrl": "/images/team/jay.png"
@@ -83,29 +83,17 @@
     "role": "Graphic Designer",
     "imageUrl": "/images/team/misty.png"
   },
-    {
+  {
     "id": "gd03",
     "name": "Junbin Chen",
     "role": "Graphic Designer",
     "imageUrl": "/images/team/junbin.png"
   },
   {
-    "id": "gd04",
-    "name": "Joanna Chen",
-    "role": "Graphic Designer",
-    "imageUrl": "/images/team/joanna.png"
-  },
-  {
     "id": "gw01",
     "name": "Henry Dixon",
     "role": "Grant Writer",
     "imageUrl": "/images/team/henry.png"
-  },
-  {
-    "id": "gw02",
-    "name": "Brendan Yee",
-    "role": "Grant Writer",
-    "imageUrl": "/images/team/brendan.png"
   },
   {
     "id": "gw03",

@@ -34,7 +34,7 @@
   position: relative;
 }
 
-.title-box {
+.community-sensor-project-title-box {
   width: fit-content;
   margin: 0 auto;
   padding: 1.5rem 3.5rem;
@@ -407,7 +407,7 @@
     padding: 0;
   }
   
-  .title-box {
+  .community-sensor-project-title-box {
     padding: 1rem 1.5rem;
     margin: 0;
     max-width: calc(100vw - 2rem);

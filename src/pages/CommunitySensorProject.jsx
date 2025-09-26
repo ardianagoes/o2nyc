@@ -34,7 +34,7 @@ const CommunitySensorProject = () => {
         <Navbar />
       </Box>
       <Box className="project-hero-section">
-        <Box className="title-box">
+        <Box className="community-sensor-project-title-box">
           <TypingEffect
             className="project-title"
             text="The Community Sensor Project"

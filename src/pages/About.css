@@ -15,7 +15,7 @@
 
 .title-box {
 	width: fit-content;
-	margin: 7rem auto 1rem auto;
+	margin: 8rem auto 1rem auto;
 	display: block;
 	padding: 1rem 3rem;
 	border-radius: 50px;
@@ -160,11 +160,21 @@
 }
 
 @media screen and (max-width: 768px) {
+	.title-box {
+		margin: 6rem auto 1rem auto;
+		padding: 0.8rem 2rem;
+		width: 60%;
+		max-width: 400px;
+	}
+	
+	.page-title.about-title {
+		font-size: 2.2rem !important;
+	}
 	
 	.about-intro-section {
-        margin: 3rem 2rem auto;
-        padding: 2rem;
-        max-width: 90%;
+        margin: 2rem auto;
+        padding: 2rem 2rem;
+        max-width: 60%;
     }
 
     .about-intro-text,
@@ -179,6 +189,7 @@
 
     .members-row {
         gap: 1.5rem;
+        justify-content: center;
     }
 
     .member-card {

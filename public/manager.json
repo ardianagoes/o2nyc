@@ -22,5 +22,17 @@
     "name": "Andy Dragan",
     "role": "Outreach Manager",
     "imageUrl": "/images/team/andy.png"
+  },
+  {
+    "id": "mm01",
+    "name": "Joanna Chen",
+    "role": "Media Manager",
+    "imageUrl": "/images/team/joanna.png"
+  },
+  {
+    "id": "pm01",
+    "name": "Brendan Yee",
+    "role": "Project Manager",
+    "imageUrl": "/images/team/brendan.png"
   }
 ]
