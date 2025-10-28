@@ -6,6 +6,15 @@ import Footer from "../comp/Footer";
 import Navbar from "../comp/Navbar";
 import "./Contact.css";
 
+const partners = [
+  { name: 'Medgar Evers College', imageSrc: '/images/collabs/MEC-Logo.png' },
+  { name: 'Brooklyn Level Up', imageSrc: '/images/collabs/BKLVL-Logo.png' },
+  { name: 'Little Haiti BK', imageSrc: '/images/collabs/LH-Logo.png' },
+  { name: 'Citizens Committee for New York City', imageSrc: '/images/collabs/CC-Logo.png' },
+  { name: 'Singing Winds', imageSrc: '/images/collabs/SW-Logo.png' },
+  { name: 'Youth Action 50', imageSrc: '/images/collabs/YA50-Logo.png' }
+];
+
 const CounterAnimation = ({ targetValue, duration = 2000 }) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -174,6 +183,7 @@ const collaborationSlides = [
 export default function Contact() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentCollaborationSlide, setCurrentCollaborationSlide] = useState(0);
+  const statsRef = useRef(null);
 
   const nextSlide = () => {
     setCurrentSlide(currentSlide === volunteerSlides.length - 1 ? 0 : currentSlide + 1);
@@ -197,7 +207,7 @@ export default function Contact() {
       <Navbar/>
       </Box>
       <Box className="contact-content">
-        <Box className="get-involved-title-container">
+      <Box className="get-involved-title-container">
         <Typography 
             variant="h3" 
             component={Link}
@@ -219,9 +229,10 @@ export default function Contact() {
         </Typography>
       </Box>
       
-      <Box className="stats-section">
+      <Box className="stats-section" ref={statsRef}>
         <CounterAnimation targetValue={8413} duration={2500} />
       </Box>
+      <CommunityPartners triggerRef={statsRef} />
         
         <Box className="content-Box">
           <Box className="content-block">
@@ -329,6 +340,50 @@ export default function Contact() {
       </Box>
       <Box className="footer">
         <Footer />
+      </Box>
+    </Box>
+  );
+}
+
+function CommunityPartners({ triggerRef }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    if (!triggerRef?.current) return;
+
+    const statsObserver = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.intersectionRatio <= 0.5) {
+          setIsVisible(true);
+          statsObserver.disconnect();
+        }
+      },
+      {
+        root: null,
+        threshold: [0.5, 0],
+        rootMargin: "0px 0px -10% 0px",
+      }
+    );
+
+    statsObserver.observe(triggerRef.current);
+
+    return () => {
+      statsObserver.disconnect();
+    };
+  }, [triggerRef]);
+
+  return (
+    <Box ref={sectionRef} className={`partners-section ${isVisible ? 'visible' : ''}`}>
+      <Typography variant="h4" className="partners-title">Our Community Partners</Typography>
+      <Box className="partners-grid">
+        {partners.map((p) => (
+          <Box key={p.name} className="partner-card">
+            <img src={p.imageSrc} alt={p.name} className="partner-logo" />
+            <Typography variant="body1" className="partner-name">{p.name}</Typography>
+          </Box>
+        ))}
       </Box>
     </Box>
   );
