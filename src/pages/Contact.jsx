@@ -15,8 +15,43 @@ const partners = [
   { name: 'Youth Action 50', imageSrc: '/images/collabs/YA50-Logo.png' }
 ];
 
-const CounterAnimation = ({ targetValue, duration = 2000 }) => {
+const SingleCounter = ({ targetValue, duration = 2000, prefix = '', suffix = '', showPlus = false, isVisible = false }) => {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let startTime;
+    const animate = (currentTime) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const currentCount = Math.floor(targetValue * easeOutQuart);
+      
+      setCount(currentCount);
+      
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        setCount(targetValue);
+      }
+    };
+    
+    requestAnimationFrame(animate);
+  }, [isVisible, targetValue, duration]);
+
+  const displayValue = count.toLocaleString();
+  const plusSign = showPlus ? '+' : '';
+
+  return (
+    <span>
+      {prefix}{displayValue}{plusSign}{suffix}
+    </span>
+  );
+};
+
+const CounterAnimation = ({ duration = 2000 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const counterRef = useRef(null);
 
@@ -45,27 +80,6 @@ const CounterAnimation = ({ targetValue, duration = 2000 }) => {
     };
   }, [isVisible]);
 
-  useEffect(() => {
-    if (!isVisible) return;
-
-    let startTime;
-    const animate = (currentTime) => {
-      if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
-      
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      const currentCount = Math.floor(targetValue * easeOutQuart);
-      
-      setCount(currentCount);
-      
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
-    };
-    
-    requestAnimationFrame(animate);
-  }, [isVisible, targetValue, duration]);
-
   return (
     <Box ref={counterRef} className="stats-container">
       <Box className="counter-container">
@@ -73,13 +87,13 @@ const CounterAnimation = ({ targetValue, duration = 2000 }) => {
           Total Raised:
         </Typography>
         <Typography variant="h2" className="counter-value">
-          ${count.toLocaleString()}
+          <SingleCounter targetValue={8500} duration={duration} prefix="$" showPlus={true} isVisible={isVisible} />
         </Typography>
       </Box>
       <Box className="stats-row">
         <Box className="stat-box">
           <Typography variant="h4" className="stat-value">
-            35+
+            <SingleCounter targetValue={35} duration={duration} showPlus={true} isVisible={isVisible} />
           </Typography>
           <Typography variant="body2" className="stat-label">
             volunteers
@@ -87,7 +101,7 @@ const CounterAnimation = ({ targetValue, duration = 2000 }) => {
         </Box>
         <Box className="stat-box">
           <Typography variant="h4" className="stat-value">
-            18+
+            <SingleCounter targetValue={18} duration={duration} showPlus={true} isVisible={isVisible} />
           </Typography>
           <Typography variant="body2" className="stat-label">
             fundraisers held
@@ -230,7 +244,7 @@ export default function Contact() {
       </Box>
       
       <Box className="stats-section" ref={statsRef}>
-        <CounterAnimation targetValue={8413} duration={2500} />
+        <CounterAnimation duration={2500} />
       </Box>
       <CommunityPartners triggerRef={statsRef} />
         
