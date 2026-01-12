@@ -93,7 +93,7 @@ const CounterAnimation = ({ duration = 2000 }) => {
       <Box className="stats-row">
         <Box className="stat-box">
           <Typography variant="h4" className="stat-value">
-            35+
+            40+
           </Typography>
           <Typography variant="body2" className="stat-label">
             volunteers
@@ -101,7 +101,7 @@ const CounterAnimation = ({ duration = 2000 }) => {
         </Box>
         <Box className="stat-box">
           <Typography variant="h4" className="stat-value">
-            <SingleCounter targetValue={18} duration={duration} showPlus={true} isVisible={isVisible} />
+            18+
           </Typography>
           <Typography variant="body2" className="stat-label">
             fundraisers held
