@@ -79,7 +79,7 @@ const CounterAnimation = ({ targetValue, duration = 2000 }) => {
       <Box className="stats-row">
         <Box className="stat-box">
           <Typography variant="h4" className="stat-value">
-            35+
+            40+
           </Typography>
           <Typography variant="body2" className="stat-label">
             volunteers
