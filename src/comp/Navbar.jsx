@@ -83,6 +83,7 @@ const Navbar = () => {
               <Box className="dropdown-menu">
                 <Link href="/board" className="dropdown-item">Board</Link>
                 <Link href="/staff" className="dropdown-item">Staff</Link>
+                <Link href="/volunteers" className="dropdown-item">Volunteers</Link>
               </Box>
             )}
           </Box>
@@ -178,6 +179,9 @@ const Navbar = () => {
                   </Link>
                   <Link href="/staff" className="mobile-menu-item" onClick={handleMobileMenuClose}>
                       Staff
+                  </Link>
+                  <Link href="/volunteers" className="mobile-menu-item" onClick={handleMobileMenuClose}>
+                      Volunteers
                   </Link>
               </Box>
           )}

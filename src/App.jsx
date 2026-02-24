@@ -4,6 +4,7 @@ import { Box } from "@mui/material";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Staff from "./pages/Staff";
+import Volunteers from "./pages/Volunteers";
 import Contact from "./pages/Contact";
 import CommunitySensorProject from "./pages/CommunitySensorProject"; 
 import { Analytics } from "@vercel/analytics/react";
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="*" element={<Home />} />
           <Route path="/board" element={<About />} />
           <Route path="/staff" element={<Staff />} />
+          <Route path="/volunteers" element={<Volunteers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/community-sensor-project" element={<CommunitySensorProject />} />
         </Routes>

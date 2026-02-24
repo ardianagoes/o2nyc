@@ -18,7 +18,7 @@
 
 .staff-title-box {
     width: fit-content;
-    margin: 3rem auto 2rem auto;
+    margin: 10rem auto 2rem auto;
     display: block;
     padding: 1rem 3rem;
     border-radius: 50px;
@@ -136,7 +136,7 @@
 
 @media screen and (max-width: 768px) {
     .staff-title-box {
-        margin-top: 6rem;
+        margin-top: 9rem;
     }
 
     .heads-title-box {

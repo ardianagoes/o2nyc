@@ -270,7 +270,7 @@ export default function Contact() {
             </Box>
             <Box className="right-column">
               <Typography variant="body1" className="volunteer-text">
-                At O2NYC, we believe in the power of collaboration. We're always looking to partner with community organizations to host events, raise awareness, and distribute our affordable air quality sensors. If you're interested in working together to make a difference, please reach out to us.
+              At O2-NYC, we believe in the power of collaboration. We're always looking to partner with community organizations to host events, raise awareness, and distribute our affordable air quality sensors. If you're interested in working together to make a difference, please reach out to us.
               </Typography>
             </Box>
           </Box>
@@ -286,7 +286,7 @@ export default function Contact() {
             <Box className="right-column sensor-image-column">
               <img
                 src="/images/sensor.png"
-                alt="O2NYC Air Quality Sensor Diagram"
+                alt="O2-NYC Air Quality Sensor Diagram"
                 className="sensor-image"
               />
               <Typography variant="caption" display="block" className="image-caption">
@@ -318,7 +318,7 @@ export default function Contact() {
             </Box>
             <Box className="right-column">
               <Typography variant="body1" className="volunteer-text">
-                Help support O2 NYC, volunteer with us to help raise money, support communities, and gain service hours!
+              Help support O2-NYC, volunteer with us to help raise money, support communities, and gain service hours!
               </Typography>
             </Box>
           </Box>
