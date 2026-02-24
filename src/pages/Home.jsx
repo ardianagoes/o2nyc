@@ -22,12 +22,13 @@ export default function Home() {
       { threshold: 0.1 } 
     );
 
-    if (infoTextRef.current) {
-      observer.observe(infoTextRef.current);
+    const node = infoTextRef.current;
+    if (node) {
+      observer.observe(node);
     }
     return () => {
-      if (infoTextRef.current) {
-        observer.unobserve(infoTextRef.current);
+      if (node) {
+        observer.unobserve(node);
       }
       observer.disconnect();
     };
@@ -187,6 +188,7 @@ export default function Home() {
         </Box>
         <Box className="right-column form-embed-container">
           <iframe
+            title="Get involved sign-up form"
             src="https://docs.google.com/forms/d/e/1FAIpQLSdWXIyeg9juJ3evVO80iZkIrT-EylJh1OG3yYQbk6aqP__4JQ/viewform?embedded=true"
             className="google-form-iframe"
             loading="lazy"

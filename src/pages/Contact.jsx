@@ -15,43 +15,8 @@ const partners = [
   { name: 'Youth Action 50', imageSrc: '/images/collabs/YA50-Logo.png' }
 ];
 
-const SingleCounter = ({ targetValue, duration = 2000, prefix = '', suffix = '', showPlus = false, isVisible = false }) => {
+const CounterAnimation = ({ targetValue, duration = 2000 }) => {
   const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!isVisible) return;
-
-    let startTime;
-    const animate = (currentTime) => {
-      if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
-      
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      const currentCount = Math.floor(targetValue * easeOutQuart);
-      
-      setCount(currentCount);
-      
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      } else {
-        setCount(targetValue);
-      }
-    };
-    
-    requestAnimationFrame(animate);
-  }, [isVisible, targetValue, duration]);
-
-  const displayValue = count.toLocaleString();
-  const plusSign = showPlus ? '+' : '';
-
-  return (
-    <span>
-      {prefix}{displayValue}{plusSign}{suffix}
-    </span>
-  );
-};
-
-const CounterAnimation = ({ duration = 2000 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const counterRef = useRef(null);
 
@@ -68,17 +33,39 @@ const CounterAnimation = ({ duration = 2000 }) => {
       { threshold: 0.1 }
     );
 
-    if (counterRef.current) {
-      observer.observe(counterRef.current);
+    const node = counterRef.current;
+    if (node) {
+      observer.observe(node);
     }
 
     return () => {
-      if (counterRef.current) {
-        observer.unobserve(counterRef.current);
+      if (node) {
+        observer.unobserve(node);
       }
       observer.disconnect();
     };
   }, [isVisible]);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let startTime;
+    const animate = (currentTime) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const currentCount = Math.floor(targetValue * easeOutQuart);
+      
+      setCount(currentCount);
+      
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+    
+    requestAnimationFrame(animate);
+  }, [isVisible, targetValue, duration]);
 
   return (
     <Box ref={counterRef} className="stats-container">
@@ -87,7 +74,7 @@ const CounterAnimation = ({ duration = 2000 }) => {
           Total Raised:
         </Typography>
         <Typography variant="h2" className="counter-value">
-          <SingleCounter targetValue={8500} duration={duration} prefix="$" showPlus={true} isVisible={isVisible} />
+          ${count.toLocaleString()}
         </Typography>
       </Box>
       <Box className="stats-row">
@@ -244,7 +231,7 @@ export default function Contact() {
       </Box>
       
       <Box className="stats-section" ref={statsRef}>
-        <CounterAnimation duration={2500} />
+        <CounterAnimation targetValue={8413} duration={2500} />
       </Box>
       <CommunityPartners triggerRef={statsRef} />
         
@@ -270,7 +257,7 @@ export default function Contact() {
             </Box>
             <Box className="right-column">
               <Typography variant="body1" className="volunteer-text">
-              At O2-NYC, we believe in the power of collaboration. We're always looking to partner with community organizations to host events, raise awareness, and distribute our affordable air quality sensors. If you're interested in working together to make a difference, please reach out to us.
+                At O2NYC, we believe in the power of collaboration. We're always looking to partner with community organizations to host events, raise awareness, and distribute our affordable air quality sensors. If you're interested in working together to make a difference, please reach out to us.
               </Typography>
             </Box>
           </Box>
@@ -280,13 +267,13 @@ export default function Contact() {
           <Box className="sensor-info-section">
             <Box className="left-column sensor-text-column">
               <Typography variant="body1" className="sensor-cost-text">
-                Our sensors are cheap and inexpensive! Made of only 3 parts, housed in one box, that all cost just $25. Contact us if you wish to help fund or host one of our sensors!
+                Our sensors are cheap and inexpensive! Made of only 3 parts, housed in one box, that all cost just $20-30. Contact us if you wish to help fund or host one of our sensors!
               </Typography>
             </Box>
             <Box className="right-column sensor-image-column">
               <img
                 src="/images/sensor.png"
-                alt="O2-NYC Air Quality Sensor Diagram"
+                alt="O2NYC Air Quality Sensor Diagram"
                 className="sensor-image"
               />
               <Typography variant="caption" display="block" className="image-caption">
@@ -318,7 +305,7 @@ export default function Contact() {
             </Box>
             <Box className="right-column">
               <Typography variant="body1" className="volunteer-text">
-              Help support O2-NYC, volunteer with us to help raise money, support communities, and gain service hours!
+                Help support O2 NYC, volunteer with us to help raise money, support communities, and gain service hours!
               </Typography>
             </Box>
           </Box>

@@ -23,13 +23,14 @@ const Footer = () => {
         threshold: 0.1, 
       }
     );
-    if (iconsRef.current) {
-      observer.observe(iconsRef.current);
+    const node = iconsRef.current;
+    if (node) {
+      observer.observe(node);
     }
 
     return () => {
-      if (iconsRef.current) {
-        observer.unobserve(iconsRef.current);
+      if (node) {
+        observer.unobserve(node);
       }
       observer.disconnect();
     };

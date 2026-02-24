@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import React, { useState } from 'react';
+import React from 'react';
 import Footer from '../comp/Footer';
 import Navbar from '../comp/Navbar';
 import AnimatedBubble from './AnimatedBubble';
@@ -14,20 +14,6 @@ const images = [
 ];
 
 const CommunitySensorProject = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => 
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prevIndex) => 
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
-
   return (
     <Box className="community-sensor-project-page">
       <Box className="navbar-box">
@@ -59,7 +45,7 @@ const CommunitySensorProject = () => {
               </Box>
               <Box className="image-content">
                 <Box className="image-wrapper">
-                  <img src={images[0]} alt="Project image 1" className="project-image" />
+                  <img src={images[0]} alt="Air quality sensor unit" className="project-image" />
                 </Box>
               </Box>
             </Box>
@@ -69,7 +55,7 @@ const CommunitySensorProject = () => {
             <Box className="content-row">
               <Box className="image-content">
                 <Box className="image-wrapper">
-                  <img src={images[1]} alt="Project image 2" className="project-image" />
+                  <img src={images[1]} alt="Sensor diagram" className="project-image" />
                 </Box>
               </Box>
               <Box className="text-content">
@@ -95,7 +81,7 @@ const CommunitySensorProject = () => {
               </Box>
               <Box className="image-content">
                 <Box className="image-wrapper">
-                  <img src={images[2]} alt="Project image 3" className="project-image" />
+                  <img src={images[2]} alt="Soldering workshop" className="project-image" />
                 </Box>
               </Box>
             </Box>
@@ -105,7 +91,7 @@ const CommunitySensorProject = () => {
             <Box className="content-row">
               <Box className="image-content">
                 <Box className="image-wrapper">
-                  <img src={images[3]} alt="Project image 4" className="project-image" />
+                  <img src={images[3]} alt="Community partner event" className="project-image" />
                 </Box>
               </Box>
               <Box className="text-content">
@@ -139,7 +125,7 @@ const CommunitySensorProject = () => {
           <AnimatedBubble direction="left">
             <Box className="mobile-image-section">
               <Box className="image-wrapper">
-                <img src={images[0]} alt="Project image 1" className="project-image" />
+                <img src={images[0]} alt="Air quality sensor unit" className="project-image" />
               </Box>
             </Box>
           </AnimatedBubble>
@@ -158,7 +144,7 @@ const CommunitySensorProject = () => {
           <AnimatedBubble direction="left">
             <Box className="mobile-image-section">
               <Box className="image-wrapper">
-                <img src={images[1]} alt="Project image 2" className="project-image" />
+                <img src={images[1]} alt="Sensor diagram" className="project-image" />
               </Box>
             </Box>
           </AnimatedBubble>
@@ -177,7 +163,7 @@ const CommunitySensorProject = () => {
           <AnimatedBubble direction="left">
             <Box className="mobile-image-section">
               <Box className="image-wrapper">
-                <img src={images[2]} alt="Project image 3" className="project-image" />
+                <img src={images[2]} alt="Soldering workshop" className="project-image" />
               </Box>
             </Box>
           </AnimatedBubble>
@@ -196,7 +182,7 @@ const CommunitySensorProject = () => {
           <AnimatedBubble direction="left">
             <Box className="mobile-image-section">
               <Box className="image-wrapper">
-                <img src={images[3]} alt="Project image 4" className="project-image" />
+                <img src={images[3]} alt="Community partner event" className="project-image" />
               </Box>
             </Box>
           </AnimatedBubble>
