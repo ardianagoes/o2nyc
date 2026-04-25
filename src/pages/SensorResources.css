@@ -86,6 +86,33 @@
   display: block;
 }
 
+.sensor-resource-mobile {
+  width: min(920px, 95%);
+  margin: 0 auto;
+  padding: 1.4rem 1.2rem;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.sensor-resource-open-button {
+  background-color: #2a7c7a !important;
+  color: white !important;
+  font-family: "Kanit", serif !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+  border-radius: 999px !important;
+  padding: 0.75rem 1.2rem !important;
+}
+
+.sensor-resource-mobile-note {
+  margin-top: 0.8rem !important;
+  color: #2a7c7a !important;
+  font-family: "Kanit", serif !important;
+}
+
 .footer {
   width: 100%;
 }
