@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.sensor-workshops-page {
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+  background-color: #2a7c7a;
+  color: white;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  animation: gentleSlideIn 0.8s ease-out;
+  position: static;
+}
+
+.navbar-box {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  margin-bottom: 4.5rem;
+}
+
+.sensor-workshops-content {
+  background-color: #2a7c7a;
+  padding-bottom: 2.5rem;
+}
+
+.sensor-workshops-title-container {
+  width: min(1100px, 92%);
+  margin: 7rem auto 2.25rem auto;
+  text-align: center;
+  padding: 1.2rem 2.2rem;
+  border-radius: 22px;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px black;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.page-title.sensor-workshops-title {
+  color: white;
+  font-family: "Kanit", serif !important;
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+  text-shadow: 2px 2px 5px black;
+  margin: 0 !important;
+}
+
+.sensor-workshops-subtitle {
+  margin-top: 0.6rem !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-family: "Kanit", serif !important;
+  font-size: 1.2rem !important;
+}
+
+.workshop-entry {
+  width: 95%;
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.workshop-entry-heading {
+  color: white !important;
+  font-family: "Kanit", serif !important;
+  font-weight: 800 !important;
+  font-size: 2rem !important;
+  text-align: center;
+  margin: 0 auto 1.4rem auto !important;
+  text-shadow: 1px 1px 2px black;
+}
+
+.workshop-carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto 1.6rem auto;
+}
+
+.workshop-image-frame {
+  width: min(920px, 95%);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.workshop-image {
+  width: 100%;
+  height: min(520px, 52vh);
+  object-fit: cover;
+  display: block;
+}
+
+.workshop-slide-arrow {
+  position: absolute !important;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.35) !important;
+  color: white !important;
+}
+
+.workshop-slide-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.workshop-slide-arrow.left {
+  left: 10px;
+}
+
+.workshop-slide-arrow.right {
+  right: 10px;
+}
+
+.workshop-entry-textbox {
+  width: min(980px, 95%);
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 16px;
+  padding: 1.6rem 1.6rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.workshop-entry-text {
+  color: #2a7c7a !important;
+  font-family: "Kanit", serif !important;
+  font-size: 1.2rem !important;
+  line-height: 1.65;
+  margin: 0 !important;
+}
+
+.footer {
+  width: 100%;
+}
+
+@keyframes gentleSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sensor-workshops-title-container {
+    margin-top: 80px;
+    padding: 1rem 1.2rem;
+  }
+
+  .page-title.sensor-workshops-title {
+    font-size: 2.2rem !important;
+  }
+
+  .sensor-workshops-subtitle {
+    font-size: 1.05rem !important;
+  }
+
+  .workshop-entry {
+    width: 90%;
+    padding: 1.2rem;
+    margin: 1.6rem auto;
+  }
+
+  .workshop-entry-heading {
+    font-size: 1.5rem !important;
+  }
+
+  .workshop-image {
+    height: 38vh;
+  }
+
+  .workshop-entry-textbox {
+    padding: 1.1rem 1.1rem;
+  }
+
+  .workshop-entry-text {
+    font-size: 1.05rem !important;
+  }
+}
+

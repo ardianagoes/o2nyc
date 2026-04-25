@@ -7,6 +7,8 @@ import Staff from "./pages/Staff";
 import Volunteers from "./pages/Volunteers";
 import Contact from "./pages/Contact";
 import CommunitySensorProject from "./pages/CommunitySensorProject"; 
+import SensorResources from "./pages/SensorResources";
+import SensorWorkshops from "./pages/SensorWorkshops";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import Clarity from '@microsoft/clarity';
@@ -44,6 +46,8 @@ const App = () => {
           <Route path="/volunteers" element={<Volunteers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/community-sensor-project" element={<CommunitySensorProject />} />
+          <Route path="/sensor-resources" element={<SensorResources />} />
+          <Route path="/sensor-workshops" element={<SensorWorkshops />} />
         </Routes>
       </BrowserRouter>
       <Analytics />

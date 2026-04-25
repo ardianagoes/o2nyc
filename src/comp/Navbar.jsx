@@ -7,18 +7,16 @@ import "./Navbar.css";
 const GOOGLE_FORM_URL = "https://forms.gle/12Fkbe73fsZ3w2Fg7";
 
 const Navbar = () => {
-  const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
-  const [isProjectsDropdownOpen, setIsProjectsDropdownOpen] = useState(false); 
-  const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false);
-  const [isMobileProjectsOpen, setIsMobileProjectsOpen] = useState(false); 
   const [scrolling, setScrolling] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [isProjectsOpen, setIsProjectsOpen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (isMobileMenuOpen) {
-          setIsMobileMenuOpen(false);
+      if (isMenuOpen) {
+        setIsMenuOpen(false);
       }
 
       const currentScrollY = window.scrollY;
@@ -40,16 +38,16 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollY, isMobileMenuOpen]);
+  }, [lastScrollY, isMenuOpen]);
 
-  const handleMobileMenuToggle = () => {
-    setIsMobileMenuOpen(prevState => !prevState);
+  const handleMenuToggle = () => {
+    setIsMenuOpen((prevState) => !prevState);
   };
 
-  const handleMobileMenuClose = () => {
-    setIsMobileMenuOpen(false);
-    setIsMobileAboutOpen(false);
-    setIsMobileProjectsOpen(false); 
+  const handleMenuClose = () => {
+    setIsMenuOpen(false);
+    setIsAboutOpen(false);
+    setIsProjectsOpen(false);
   };
 
   return (
@@ -61,163 +59,132 @@ const Navbar = () => {
               <img src="/images/logo.png" alt="logo" className="website-logo" />
             </Link>
           </Box>
-          <Link href="/home" className="selection-item">Home</Link>
-          <Box
-            className="selection-item-wrapper"
-            onMouseEnter={() => setIsAboutDropdownOpen(true)}
-            onMouseLeave={() => setIsAboutDropdownOpen(false)}
-          >
-            <Box
-            className="selection-item navbar-dropdown-trigger"
-              sx={{
-                cursor: 'default',
-                '&:hover': {
-                  transform: 'none',
-                  textShadow: 'none',
-                }
-              }}
-            >
-              About Us
-            </Box>
-            {isAboutDropdownOpen && (
-              <Box className="dropdown-menu">
-                <Link href="/board" className="dropdown-item">Board</Link>
-                <Link href="/staff" className="dropdown-item">Staff</Link>
-                <Link href="/volunteers" className="dropdown-item">Volunteers</Link>
-              </Box>
-            )}
-          </Box>
-          <Box
-            className="selection-item-wrapper"
-            onMouseEnter={() => setIsProjectsDropdownOpen(true)}
-            onMouseLeave={() => setIsProjectsDropdownOpen(false)}
-          >
-            <Box
-              className="selection-item navbar-dropdown-trigger"
-              sx={{
-                cursor: 'default',
-                '&:hover': {
-                  transform: 'none',
-                  textShadow: 'none',
-                }
-              }}
-            >
-              Projects
-            </Box>
-            {isProjectsDropdownOpen && (
-              <Box className="dropdown-menu">
-                <Link href="/community-sensor-project" className="dropdown-item">
-                  Community Sensor Project
-                </Link>
-              </Box>
-            )}
-          </Box>
-
-          <Link href="/contact" className="selection-item">Join Us</Link>
         </Box>
-        <Box className="navbar-right">
-          <Link
-            href="https://linktr.ee/o2nyc"
-            className="linktree-link"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img src={"/images/darklinktree.png"} alt="linktree logo" className="navbar-social-icon"/>
-            <span className="linktree-text">LinkTree</span>
-          </Link>
+        <Box className="navbar-right navbar-menu">
           <Button
             variant="contained"
             href={GOOGLE_FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="navbar-contact-button"
+            className="navbar-contact-button desktop-only"
             size="small"
             sx={{
-              backgroundColor: '#2A7C7A',
-              color: 'white',
-              fontWeight: 'bold',
-              fontSize: '1.5em',
-              padding: '1rem 18px',
-              borderRadius: '25px',
-              textTransform: 'none',
-              boxShadow: '0 2px 5px black',
-              transition: 'background-color 0.2s ease, transform 0.2s ease',
-              '&:hover': {
-              backgroundColor: '#f5f5f5',
-              color: '#256d6a',
-              transform: 'translateY(-1px)',
-              boxShadow: '0px 3px 7px black'
-              }
+              backgroundColor: "#2A7C7A",
+              color: "white",
+              fontWeight: "bold",
+              fontSize: "1.05rem",
+              padding: "0.7rem 16px",
+              borderRadius: "999px",
+              textTransform: "none",
+              boxShadow: "0 2px 5px rgba(0,0,0,0.35)",
+              transition: "background-color 0.2s ease, transform 0.2s ease",
+              "&:hover": {
+                backgroundColor: "#1f6c69",
+                transform: "translateY(-1px)",
+              },
             }}
-          >
-            Contact Us!
-          </Button>
-        </Box>
-        <IconButton
-          className="hamburger-icon"
-          aria-label="toggle menu"
-          onClick={handleMobileMenuToggle}
-          sx={{ color: '#215d4e', display: { xs: 'flex', md: 'none' } }}
-        >
-          {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
-        </IconButton>
-      </Box>
-      <Box className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
-        <Link href="/home" className="mobile-menu-item" onClick={handleMobileMenuClose}>Home</Link>
-        <Box className="mobile-menu-group">
-          <Box
-              className="mobile-menu-item"
-              onClick={() => setIsMobileAboutOpen(!isMobileAboutOpen)}
-              sx={{ cursor: 'pointer', width: '100%' }}
-          >
-              About Us
-          </Box>
-          {isMobileAboutOpen && (
-              <Box className="mobile-submenu">
-                  <Link href="/board" className="mobile-menu-item" onClick={handleMobileMenuClose}>
-                      Board
-                  </Link>
-                  <Link href="/staff" className="mobile-menu-item" onClick={handleMobileMenuClose}>
-                      Staff
-                  </Link>
-                  <Link href="/volunteers" className="mobile-menu-item" onClick={handleMobileMenuClose}>
-                      Volunteers
-                  </Link>
-              </Box>
-          )}
-        </Box>
-        <Box className="mobile-menu-group">
-            <Box
-                className="mobile-menu-item"
-                onClick={() => setIsMobileProjectsOpen(!isMobileProjectsOpen)}
-                sx={{ cursor: 'pointer', width: '100%' }}
-            >
-                Projects
-            </Box>
-            {isMobileProjectsOpen && (
-                <Box className="mobile-submenu">
-                    <Link href="/community-sensor-project" className="mobile-menu-item" onClick={handleMobileMenuClose}>
-                        Community Sensor Project
-                    </Link>
-                </Box>
-            )}
-        </Box>
-        <Link href="/contact" className="mobile-menu-item" onClick={handleMobileMenuClose}>Join Us</Link>
-        <Box className="mobile-menu-extras">
-          <Link href="https://linktr.ee/o2nyc" className="mobile-menu-item social" target="_blank" rel="noopener noreferrer" onClick={handleMobileMenuClose}>
-            <img src={"/images/linktree.png"} alt="Instagram" className="mobile-menu-icon"/> Linktree
-          </Link>
-          <Button
-            variant="outlined"
-            href={GOOGLE_FORM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            fullWidth
-            onClick={handleMobileMenuClose}
-            sx={{fontFamily: '"Kanit", serif', borderColor: '#215d4e', color: '#215d4e', mt: '1rem', '&:hover': { borderColor: '#3a9d9b', backgroundColor: 'rgba(58, 157, 155, 0.05)' } }}
           >
             Contact Us
           </Button>
+          <IconButton
+            className="hamburger-icon"
+            aria-label="toggle navigation menu"
+            aria-expanded={isMenuOpen ? "true" : "false"}
+            onClick={handleMenuToggle}
+            sx={{ color: "#fff" }}
+          >
+            {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
+          </IconButton>
+          <Box className={`navbar-dropdown ${isMenuOpen ? "open" : ""}`}>
+            <Link href="/" className="navbar-dropdown-item" onClick={handleMenuClose}>
+              Home
+            </Link>
+            <Box
+              className="navbar-dropdown-item navbar-dropdown-parent"
+              role="button"
+              tabIndex={0}
+              aria-expanded={isAboutOpen ? "true" : "false"}
+              onClick={() => setIsAboutOpen((v) => !v)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") setIsAboutOpen((v) => !v);
+              }}
+            >
+              <span>About Us</span>
+              <span className="navbar-dropdown-caret">{isAboutOpen ? "▴" : "▾"}</span>
+            </Box>
+            {isAboutOpen && (
+              <Box className="navbar-dropdown-submenu">
+                <Link href="/board" className="navbar-dropdown-subitem" onClick={handleMenuClose}>
+                  Board
+                </Link>
+                <Link href="/staff" className="navbar-dropdown-subitem" onClick={handleMenuClose}>
+                  Staff
+                </Link>
+                <Link href="/volunteers" className="navbar-dropdown-subitem" onClick={handleMenuClose}>
+                  Volunteers
+                </Link>
+              </Box>
+            )}
+            <Box
+              className="navbar-dropdown-item navbar-dropdown-parent"
+              role="button"
+              tabIndex={0}
+              aria-expanded={isProjectsOpen ? "true" : "false"}
+              onClick={() => setIsProjectsOpen((v) => !v)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") setIsProjectsOpen((v) => !v);
+              }}
+            >
+              <span>Projects</span>
+              <span className="navbar-dropdown-caret">{isProjectsOpen ? "▴" : "▾"}</span>
+            </Box>
+            {isProjectsOpen && (
+              <Box className="navbar-dropdown-submenu">
+                <Link
+                  href="/community-sensor-project"
+                  className="navbar-dropdown-subitem"
+                  onClick={handleMenuClose}
+                >
+                  Community Sensor Project
+                </Link>
+                <Link
+                  href="/sensor-workshops"
+                  className="navbar-dropdown-subitem"
+                  onClick={handleMenuClose}
+                >
+                  Sensor Workshops
+                </Link>
+              </Box>
+            )}
+            <Link
+              href="/sensor-resources"
+              className="navbar-dropdown-item"
+              onClick={handleMenuClose}
+            >
+              Sensor Resources
+            </Link>
+            <Link href="/contact" className="navbar-dropdown-item" onClick={handleMenuClose}>
+              Join Us
+            </Link>
+            <Link
+              href={GOOGLE_FORM_URL}
+              className="navbar-dropdown-item mobile-only"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleMenuClose}
+            >
+              Contact Us
+            </Link>
+            <Link
+              href="https://linktr.ee/o2nyc"
+              className="navbar-dropdown-item"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleMenuClose}
+            >
+              Linktree
+            </Link>
+          </Box>
         </Box>
       </Box>
     </Box>

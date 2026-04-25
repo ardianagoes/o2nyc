@@ -347,10 +347,16 @@ export default function Contact() {
 }
 
 function CommunityPartners({ triggerRef }) {
-  const [isVisible, setIsVisible] = useState(false);
+  const isMobile =
+    typeof window !== "undefined" && window.matchMedia("(max-width: 900px)").matches;
+  const [isVisible, setIsVisible] = useState(isMobile);
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    if (isMobile) {
+      setIsVisible(true);
+      return;
+    }
     if (!triggerRef?.current) return;
 
     const statsObserver = new IntersectionObserver(
@@ -373,7 +379,7 @@ function CommunityPartners({ triggerRef }) {
     return () => {
       statsObserver.disconnect();
     };
-  }, [triggerRef]);
+  }, [triggerRef, isMobile]);
 
   return (
     <Box ref={sectionRef} className={`partners-section ${isVisible ? 'visible' : ''}`}>
