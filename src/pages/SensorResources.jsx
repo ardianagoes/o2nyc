@@ -35,9 +35,6 @@ export default function SensorResources() {
               >
                 Open Assembly PDF
               </Button>
-              <Typography variant="body2" className="sensor-resource-mobile-note">
-                Opens in a new tab so you can swipe/scroll through pages on mobile.
-              </Typography>
             </Box>
           ) : (
             <Box className="sensor-resource-embed">
@@ -65,9 +62,6 @@ export default function SensorResources() {
               >
                 Open Software Setup PDF
               </Button>
-              <Typography variant="body2" className="sensor-resource-mobile-note">
-                Opens in a new tab so you can swipe/scroll through pages on mobile.
-              </Typography>
             </Box>
           ) : (
             <Box className="sensor-resource-embed">

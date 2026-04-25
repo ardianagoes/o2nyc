@@ -200,12 +200,13 @@
 .volunteer-text {
 	background-color: white;
 	color: #3b9694;
-	padding: 2rem;
+	padding: 1.6rem;
 	border-radius: 15px;
 	font-size: 1.5rem !important;
 	font-family: "Kanit", serif !important;
 	line-height: 1.6;
-	max-width: 75%;
+	max-width: 62%;
+	margin: 0 auto;
 }
 
 .footer {
@@ -228,16 +229,16 @@
 }
 
 .sensor-cost-text {
-	max-width: 50rem;
+	max-width: 42rem;
 	font-size: 1.5rem !important;
 	line-height: 1.6;
 	font-family: "Kanit", serif !important;
 	color: #3b9694;
 	text-align: left;
 	background-color: white;
-	padding: 3rem;
+	padding: 2.4rem;
 	border-radius: 15px;
-	margin-left: 1rem !important;
+	margin: 0 auto !important;
  }
 
 .sensor-image-column {
