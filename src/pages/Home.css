@@ -292,12 +292,13 @@
 .home-image-caption {
 	display: block;
 	margin-top: 0.3rem !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
 	font-family: "Kanit", serif !important;
 	font-size: 1rem !important;
 	color: black !important;
 	text-align: center;
 	max-width: 60% !important;
-	margin-left: 1rem !important;
 	line-height: 2.5rem !important;
 }
 

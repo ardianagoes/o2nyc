@@ -8,7 +8,7 @@
   background-color: #2a7c7a;
   color: white;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   animation: gentleSlideIn 0.8s ease-out;
@@ -26,6 +26,9 @@
 .sensor-workshops-content {
   background-color: #2a7c7a;
   padding-bottom: 2.5rem;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
 }
 
 .sensor-workshops-title-container {
@@ -56,7 +59,7 @@
 }
 
 .workshop-entry {
-  width: 95%;
+  width: min(1200px, 92%);
   max-width: 1200px;
   margin: 2.5rem auto;
   padding: 2.5rem;
@@ -66,6 +69,7 @@
   -webkit-backdrop-filter: blur(5px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  box-sizing: border-box;
 }
 
 .workshop-entry-heading {
@@ -124,8 +128,8 @@
 }
 
 .workshop-entry-textbox {
-  width: min(980px, 95%);
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   background: rgba(255, 255, 255, 0.98);
   border-radius: 16px;
   padding: 1.6rem 1.6rem;
@@ -171,7 +175,7 @@
   }
 
   .workshop-entry {
-    width: 90%;
+    width: min(1200px, 96%);
     padding: 1.2rem;
     margin: 1.6rem auto;
   }
