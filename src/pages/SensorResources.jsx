@@ -5,7 +5,7 @@ import "./SensorResources.css";
 
 export default function SensorResources() {
   const isMobile =
-    typeof window !== "undefined" && window.matchMedia("(max-width: 900px)").matches;
+    typeof window !== "undefined" && window.matchMedia("(max-width: 1024px)").matches;
 
   return (
     <Box className="sensor-resources-page">
