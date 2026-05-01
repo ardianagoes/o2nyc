@@ -302,7 +302,7 @@
 	line-height: 2.5rem !important;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-device-width: 1150px) {
 
 	.info-image-container {
 		margin: 0;

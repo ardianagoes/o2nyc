@@ -83,8 +83,8 @@ const Navbar = () => {
             </Box>
 
             <Box className="desktop-nav-item desktop-nav-dropdown" tabIndex={0}>
-              <span className="desktop-nav-link desktop-nav-trigger">Project</span>
-              <Box className="desktop-nav-menu" role="menu" aria-label="Project">
+              <span className="desktop-nav-link desktop-nav-trigger">Projects</span>
+              <Box className="desktop-nav-menu" role="menu" aria-label="Projects">
                 <Link href="/community-sensor-project" className="desktop-nav-menu-item" role="menuitem">
                   Community Sensor Project
                 </Link>
@@ -158,7 +158,7 @@ const Navbar = () => {
                       if (e.key === "Enter" || e.key === " ") setIsProjectsOpen((v) => !v);
                     }}
                   >
-                    <span>Project</span>
+                    <span>Projects</span>
                     <span className="navbar-dropdown-caret">{isProjectsOpen ? "▴" : "▾"}</span>
                   </Box>
                   {isProjectsOpen && (
@@ -279,7 +279,7 @@ const Navbar = () => {
               if (e.key === "Enter" || e.key === " ") setIsProjectsOpen((v) => !v);
             }}
           >
-            <span>Project</span>
+            <span>Projects</span>
             <span className="navbar-dropdown-caret">{isProjectsOpen ? "▴" : "▾"}</span>
           </Box>
           {isProjectsOpen && (
