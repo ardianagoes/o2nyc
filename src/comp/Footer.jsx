@@ -51,7 +51,7 @@ const Footer = () => {
   return (
     <Box className="contact-box">
       <Box className="footer-logo-container">
-        <img src="/images/logo.png" alt="O2-NYC Logo" className="footer-main-logo" />
+        <img src="/images/logo.png" alt="O2NYC Logo" className="footer-main-logo" />
       </Box>
       <Box className="icons-container">
         <Box
@@ -88,7 +88,7 @@ const Footer = () => {
         )}
       </Box>
       <Typography className="copyright" variant="body1" align="center">
-        ©{new Date().getFullYear()} O2-NYC 
+        ©{new Date().getFullYear()} O2NYC 
       </Typography>
       <br/>
     </Box>

@@ -148,7 +148,7 @@ export default function SensorWorkshops() {
 
           <Box className="workshop-entry-textbox">
             <Typography variant="body1" className="workshop-entry-text">
-              Our first sensor assembly workshop was a great success! Community members joined us to build 10 new sensors and learn about air quality sensors! 
+              Our first sensor assembly workshop was a great success! Community members joined us to build 10 new sensors and learn about air quality! 
               A special thanks to the Singing Winds and Reinier Jacqueline for hosting us at PS 230.
             </Typography>
           </Box>

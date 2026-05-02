@@ -128,7 +128,7 @@ export default function Home() {
           className={`action-text-box ${isActionVisible ? "visible" : ""}`}
         >
           <Typography variant="body1" component="p">
-            To close this gap, O2-NYC is designing and distributing{" "}
+            To close this gap, O2NYC is designing and distributing{" "}
             <strong>affordable air sensors</strong> that provide{" "}
             <strong>real-time pollution data</strong>, equipping communities with
             the tools they need to advocate for <strong>cleaner air</strong>.{" "}
