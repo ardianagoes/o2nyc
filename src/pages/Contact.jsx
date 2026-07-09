@@ -231,7 +231,7 @@ export default function Contact() {
       </Box>
       
       <Box className="stats-section" ref={statsRef}>
-        <CounterAnimation targetValue={8413} duration={2500} />
+        <CounterAnimation targetValue={13500} duration={2500} />
       </Box>
       <CommunityPartners triggerRef={statsRef} />
         
