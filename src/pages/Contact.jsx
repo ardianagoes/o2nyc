@@ -96,7 +96,7 @@ const CounterAnimation = ({ targetValue, duration = 2000 }) => {
         </Box>
         <Box className="stat-box">
           <Typography variant="h4" className="stat-value">
-            2
+            6
           </Typography>
           <Typography variant="body2" className="stat-label">
             grants received
@@ -231,7 +231,7 @@ export default function Contact() {
       </Box>
       
       <Box className="stats-section" ref={statsRef}>
-        <CounterAnimation targetValue={13500} duration={2500} />
+        <CounterAnimation targetValue={25500} duration={2500} />
       </Box>
       <CommunityPartners triggerRef={statsRef} />
         
